@@ -1,80 +1,74 @@
-# Handoff — content and assets are ready, the code needs to catch up
+# Content handoff
 
-Everything in `content/` and `img/` is final enough to build against. `MeYouAndUs.dc.html`
-currently reads a 12-entry flat `projects.json` and will need four changes to use it.
+Reply to `DESIGN-STATE.md`. Design decisions are yours; this file and everything in
+`content/` are content only. Anywhere my earlier documents strayed into colour, type, motion
+or treatment, that's been removed rather than argued with — `ASSET-SPEC.md` is now a data and
+image contract and nothing more.
 
-Read `content/ASSET-SPEC.md` first — it's the full contract. This file is just what changed.
+## Your four asks — done
 
-## 1. The wall is now two sections, not one list
+**1. `projects.json` at 20 entries.** Ready. `section`, `span`, `wide`, `video`, `credits` all
+populated. Rows total 12 within each section: section 1 is 5+7, 8+4, 4+4+4, 5+4+3; section 2
+is 7+5, 8+4, 8+4, 3+3+3+3. Four projects carry `wide` (`tilo-v2`, `fantasia-express`,
+`kindred-spirits`, `invisible-arts-network`). Two have an empty `cover` (`madheads`,
+`not-the-beatles`). 13 of 20 carry a `video`.
 
-`projects.json` has **20 entries**, each with a `section` of `1` or `2`. Loop over sections,
-not over projects. Rows must total 12 **within** a section — they don't run across the break.
+**2. `imageCredit`.** Added to every project entry, empty string where not required. Currently
+set on `handprint-2012` only — Simon Kirwan. Also on `site.images.hero`, same photographer.
 
-| `section` | `theme` | Heading | Copy already written in the mockup |
-| --- | --- | --- | --- |
-| 1 | `interface` | Breaking interfaces | "We take the technology people use without thinking…" |
-| 2 | `place` | Amplifying place | "Work made for one specific street, market, waiting room or station…" |
+**3. A `site` block.** New file, `content/site.json`, rather than a block inside another file,
+so it can be fetched independently:
 
-- Section 1 rows: 5+7, 8+4, 4+4+4, 5+4+3
-- Section 2 rows: 7+5, 8+4, 8+4, 3+3+3+3
+```
+tagline                    the hero subline, written to hold one line
+images.hero / images.bleed  src, imageCredit, alt — both 2560x1440, real files, not stand-ins
+sections[]                  id, theme, heading, blurb for the two sets
+```
 
-The "02" marker on the Amplifying place band implies a chapter structure. If a third band
-gets added for All Projects / About, it's `03`.
+I've included the section headings and blurbs there too. They're copy, and nothing else in
+the build is hard-coded, so they may as well match. Ignore that part if you'd rather keep them
+in the component.
 
-## 2. New fields on every project
+`img/site/hero.jpg` and `img/site/bleed.jpg` both exist and are in the repo — swap off
+`lowry-to-life.jpg` and `brazil.jpg` when convenient.
 
-| Field | What to do with it |
-| --- | --- |
-| `wide` | Present on the four span-7/8 projects. **Use it instead of `cover` on the wall** — it's a 2.8:1 crop that suits a panoramic cell. `cover` stays the 3:2 for everywhere else |
-| `video` | Vimeo or YouTube URL, present on 13 of 20. Should lead the modal above the gallery. Empty string means no film |
-| `credits` | Collaborator line, set small under the blurb. Empty string means none |
-| `theme` / `alsoTheme` | `alsoTheme` is on the four projects that are genuinely both. It's for filtering on the All Projects page — **do not tile anything twice on the home wall** |
+**4. `about.json`.** Unchanged.
 
-## 3. Empty cells take their section's colour
+## Contact
 
-Two projects have no cover: `madheads` (section 1) and `not-the-beatles` (section 2). The
-drop-slot behaviour already in the build is right — just make the placeholder inherit the
-section colour rather than grey. Magenta in section 1, cyan in section 2.
+Keep both nav items, and read the same `contact` block in `about.json` for whichever view
+shows it. There's one email address and a base — not enough to justify a second file, and if
+it ever changes it should change once.
 
-`not-the-beatles` is in a span-7 cell and has no `wide` yet, so it stays a drop-slot until
-there's a photograph.
+Whether Contact is its own takeover or a block at the foot of About is a design call. The
+content works either way. Worth knowing that About is long — 28 catalogue entries, 12 awards,
+8 press, 13 residencies — so an email at the bottom of it is a long scroll from the nav.
 
-## 4. About is a takeover, not a page
+## Your two confirmations
 
-New file: `content/about.json`. Same modal mechanism as a project, but full bleed and routed
-at `#/about` so it has a real URL and can be indexed.
+Both are open questions for Alastair, not things I can settle:
 
-Treatment is the inverse of the wall — the wall is all image and no words, About is all words
-and no image. Ink `#1D1D1B` on ground `#F3F2F2`, one typographic column, dates in a left
-rail, **no photography in it at all**.
+- **`lowry-to-life`** — the image is `Al_colour_27.jpg`, which is what the old site's Lowry to
+  Life page used. It reads as a children's drawing rather than anything Lowry-ish, so either
+  the old site was wrong or I'm misreading the work. Unconfirmed.
+- **`tilo-v2`** — cover and gallery are frame grabs from
+  `ART/tilo___digital_&_interactive_art_platform.mp4`. The film is branded "digital &
+  interactive art platform", which reads later than the 2013–15 v1 material, but I can't
+  confirm it's the 2023 Phoenix Nottingham work. Unconfirmed.
 
-Structure: `statement`, `showreel`, `contact`, `works` (28 entries, some with a `sub` array of
-venues), `awards`, `press`, `residencies`. Entries in `works` carry a `slug` when they match a
-project — link those titles into the project modal so About isn't a dead end. `press` items
-with an empty `url` should render as plain text, not a broken link.
+Both are flagged in `ASSET-MANIFEST.md` under stand-ins, along with five others — `sonic-market`
+(no photography of it exists anywhere), `bigmouth` (640×360 upscaled), `when-i-grow-up`,
+`homewalk`, `fantasia-express`.
 
-Nav currently reads WORK / CONTACT with no route to About or to the full catalogue. Both
-need adding.
+## Two consequences of your changes, for the record
 
-## 5. Colour roles
+- **Footer has no email.** So `contact.email` now surfaces only in the Contact view. Noted in
+  the spec; no content change needed.
+- **The hero subline is new copy.** "Breaking interfaces and amplifying place" came from the
+  design, not from me. It's now `site.tagline` and I've left the wording exactly as built.
 
-| Colour | Job |
-| --- | --- |
-| Magenta `#E5007E` | Section 1 band and its drop-slots |
-| Cyan `#009EE2` | Section 2 band, its drop-slots, and the footer |
-| Yellow `#FFEC00` | Project modals |
-| Ink `#1D1D1B` | The About takeover |
+## Not built yet, so still worth flagging
 
-On yellow: as the full field behind colour photographs it fights badly. Better as the modal's
-furniture — rules, meta line, close control, captions — against ink or ground. Worth building
-both and looking.
-
-## Notes
-
-- Footer social links have been removed — `contact.links` is an empty array. The old Vimeo
-  and Instagram links in the HTML footer should come out too.
-- `img/projects/handprint-2012/cover.jpg` and `img/site/hero.jpg` are Simon Kirwan
-  photographs and need a credit line. There's no field for image credit yet.
-- `content/ASSET-MANIFEST.md` lists which images are final and which are stand-ins. Seven are
-  placeholder-grade — worth knowing before judging how a cell looks.
-- The old flat `img/*.jpg` files are not in this repo. Nothing references them any more.
+`video` and `credits` are populated on the entries but not rendered. Section 2 is a duplicate
+of section 1. None of that blocks anything on the content side — the data is there when you
+get to it.

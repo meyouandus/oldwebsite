@@ -1,49 +1,50 @@
 # MeYouAndUs — asset + content spec
 
-The front end is already wired to this contract. `MeYouAndUs.dc.html` fetches
-`content/projects.json` at load and builds the whole project wall and every project modal
-from it. **No project content lives in the code.** Your job is images in `img/` and text in
-`content/projects.json`.
+The data and image contract between content and the front end. `MeYouAndUs.dc.html` fetches
+these files at load; **no content lives in the code**. This document specifies what the files
+contain and what shape the images are. How any of it is presented — colour, type, motion,
+layout treatment — is a design decision and lives in `DESIGN-STATE.md`.
 
-Add an entry → a card appears. Reorder the array → the wall reorders. Change `span` → the
-tiling changes. Leave `cover` empty → that cell shows a drag-and-drop placeholder instead of
-an image.
+Add an entry and a project appears. Reorder the array and the order changes. Change `span`
+and the tiling changes. Leave `cover` empty and there's no image to show.
 
 ## Folders
 
 ```
 content/
-  projects.json           the single source of truth for project text + image paths
+  projects.json           the 20 projects — text, spans, image paths
+  about.json              statement, catalogue, awards, press, residencies, contact
+  site.json               tagline, the two site images, section headings and blurbs
 img/
   site/
-    hero.jpg              2560 x 1440 (16:9), dark, wide. The landing photograph.
-    bleed.jpg             2560 x 1440 (16:9). The "Amplifying place" full-bleed band.
+    hero.jpg              2560 x 1440 (16:9). The landing photograph.
+    bleed.jpg             2560 x 1440 (16:9). The second full-bleed photograph.
   projects/
     <slug>/
       cover.jpg           2400 x 1600 (3:2)  — the mosaic wall
       wide.jpg            2400 x  860 (2.8:1) — OPTIONAL. Used instead of cover.jpg when
                                                 present, for projects in a wide cell
                                                 (span 7 or 8)
-      01.jpg 02.jpg 03.jpg  2400px on the long edge, any ratio — the project modal gallery
+      01.jpg 02.jpg 03.jpg  2400px on the long edge, any ratio — the project gallery
 ```
 
 `<slug>` is lowercase, hyphenated, and must match `slug` in the JSON. Current slugs, by
 section:
 
-- **Section 1, breaking the interface:** `madheads`, `tilo-v2`, `fantasia-express`,
+- **Section 1, `interface`:** `madheads`, `tilo-v2`, `fantasia-express`,
   `bigmouth`, `cakenocake`, `emofie`, `when-i-grow-up`, `tilo-v1`, `humble-market`,
   `meyouandus-series`
-- **Section 2, amplifying place:** `not-the-beatles`, `homewalk`, `kindred-spirits`,
+- **Section 2, `place`:** `not-the-beatles`, `homewalk`, `kindred-spirits`,
   `sonic-market`, `invisible-arts-network`, `handprint-2012`, `townsend-lane`,
   `wishing-well`, `lowry-to-life`, `handprint-2008`
 
 ## Image rules
 
 - JPEG, quality ~80, sRGB.
-- **Full colour.** The greyscale on the wall is applied in code (`filter: grayscale(1)
-  contrast(1.06)`) and lifted on hover; modal galleries show colour. Never pre-convert.
-- Keep the subject centred — every cell crops from the centre with `object-fit: cover`.
-- Long edge 2400px; the hero wants 2560px. Aim under 400KB per file.
+- **Full colour, never pre-converted.** Any greyscale treatment is applied in code, so the
+  file underneath must be the colour original.
+- Keep the subject centred — cells crop from the centre with `object-fit: cover`.
+- Long edge 2400px; the two site images 2560px. Aim under 400KB per file.
 
 ## Cell widths (why `wide.jpg` exists)
 
@@ -68,12 +69,13 @@ Current layout:
 
 ## Two sections
 
-The home page wall is split by theme, matching the two calls to action:
+The projects are split into two thematic sets. Headings and blurbs live in
+`content/site.json`; presentation is the front end's business.
 
-| `section` | `theme` | Heading | What qualifies |
-| --- | --- | --- | --- |
-| 1 | `interface` | Breaking the interface | The work is bound to a device, a screen or a body, and could travel |
-| 2 | `place` | Amplifying place | The work is bound to a site and couldn't move |
+| `section` | `theme` | What qualifies |
+| --- | --- | --- |
+| 1 | `interface` | The work is bound to a device, a screen or a body, and could travel |
+| 2 | `place` | The work is bound to a site and couldn't move |
 
 Four projects genuinely sit in both and carry an `alsoTheme`: `fantasia-express` and
 `humble-market` (section 1, also place), `not-the-beatles` and `homewalk` (section 2, also
@@ -92,7 +94,7 @@ An array of 20. Array order is wall order, within `section` order.
     "year": "2024",
     "place": "Liverpool",
     "commissioner": "Self-initiated",
-    "blurb": "One or two sentences, plain and factual, 30–45 words. It sets at display size in the modal, so it should read as a statement, not a press release.",
+    "blurb": "One or two sentences, plain and factual, 30–45 words. It sets large, so it should read as a statement, not a press release.",
     "theme": "place",
     "alsoTheme": "interface",
     "section": 2,
@@ -111,33 +113,29 @@ An array of 20. Array order is wall order, within `section` order.
 
 | Field | Notes |
 | --- | --- |
-| `slug` | Must match the image folder name. Used as the modal's identity. |
-| `title` | Shown on hover over the cell and as the modal headline (uppercase, display size). |
+| `slug` | Must match the image folder name. The project's stable identifier. |
+| `title` | The project's name. Used wherever the project is identified. |
 | `year` | A string, so ranges work: `"2012–14"`. |
-| `place` | City or venue. Joined with `year` as the hover meta line. |
+| `place` | City or venue. Pairs with `year` as the project's meta line. |
 | `commissioner` | Funder or commissioning body; `"Self-initiated"` when there isn't one. |
 | `blurb` | 30–45 words, plain and factual, no marketing adjectives. |
 | `theme` | `"interface"` or `"place"`. Must agree with `section`. |
 | `alsoTheme` | Optional, the opposite value. Only for work that genuinely does both. |
-| `section` | `1` (breaking the interface) or `2` (amplifying place). |
+| `section` | `1` or `2`. See the two sections above. |
 | `span` | 3–8. Rows must total 12, and each section must total a multiple of 12. |
-| `cover` | Wall image. Empty string or omitted → a drop-slot placeholder renders. |
-| `wide` | Optional panoramic crop; takes precedence over `cover` on the wall. |
-| `video` | Optional Vimeo or YouTube URL. Leads the modal when present. Empty string when there isn't one. |
-| `credits` | Optional collaborators line, set small under the blurb. Empty string when there isn't one. |
-| `images` | 0–3 files for the modal. First one prints at 21:9 full width, the rest at 3:2 half width. An empty array shows an "images to come" note. |
+| `cover` | The project's wall image. Empty string means no image exists yet. |
+| `wide` | Panoramic 2.8:1 crop, supplied for span-7/8 projects. Takes precedence over `cover` on the wall. |
+| `video` | Vimeo or YouTube URL. Empty string when there isn't one. Present on 13 of 20. |
+| `credits` | Collaborators line. Empty string when there isn't one. |
+| `imageCredit` | Photographer credit for the project's images. Empty string when not required. Currently only `handprint-2012` (Simon Kirwan). |
+| `images` | 0–3 gallery files. Per `DESIGN-STATE.md` the first sets at 21:9 and the rest at 3:2, so supply accordingly. Empty array means none exist. |
 
 Paths are relative to the project root (the same folder as `MeYouAndUs.dc.html`).
 
 ## content/about.json
 
-The About view is a **takeover, not a page** — same mechanism as a project modal, full bleed,
-routed at `#/about` so it has a real URL and can be indexed and linked. The home page stays a
-single HTML file.
-
-Treatment is the inverse of the wall: the wall is all image and no words, About is all words
-and no image. Ink `#1D1D1B` on ground `#F3F2F2`, one typographic column, dates in a left
-rail, no photography anywhere in it. That restraint is the design idea — don't decorate it.
+The About content. There is no photography in it and none is expected — it's a CV, and the
+only images the site needs are the two in `site.json` plus the project assets.
 
 ```
 {
@@ -153,11 +151,12 @@ rail, no photography anywhere in it. That restraint is the design idea — don't
 
 | Field | Notes |
 | --- | --- |
-| `date` | Free text, so `"Dec 2008"`, `"2013–15"` and `""` all work. Sets in the left rail. |
-| `works[].slug` | Matches a `slug` in `projects.json`, or `null`. When set, the title links into that project's modal — this is what stops About being a dead end. |
-| `works[].sub` | Optional venue list for works that toured or recurred. Indents under the entry. |
-| `press[].url` | Empty string means the link is known but the URL is lost. Render as plain text, not a broken link. |
+| `date` | Free text, so `"Dec 2008"`, `"2013–15"` and `""` all work. |
+| `works[].slug` | Matches a `slug` in `projects.json`, or `null`. When set, the entry can link through to that project. |
+| `works[].sub` | Optional venue list for works that toured or recurred. |
+| `press[].url` | Empty string means the link is known but the URL is lost — there is nothing to link to. |
 | `press[].note` | Internal only. Never rendered. |
+| `contact` | Email and base. This is the only place contact details live, in About or a Contact view or both — one source either way. |
 
 Current contents: 28 catalogue entries (49 lines with sub-items), 12 awards, 8 press, 13
 residencies. Five catalogue entries have no project page and `slug: null` — Catch Me If You
@@ -166,6 +165,16 @@ of the 20 projects appears in the catalogue.
 
 **The PDF is generated from this file, never written by hand.** Same source, two outputs — a
 CV attached to a funding application can't then drift from the site.
+
+## content/site.json
+
+Site-level copy and the two structural photographs, so neither is hard-coded.
+
+| Field | Notes |
+| --- | --- |
+| `tagline` | The hero subline. Written to sit on one line. |
+| `images.hero` / `images.bleed` | `src`, `imageCredit`, `alt`. Both 2560×1440. |
+| `sections[]` | `id`, `theme`, `heading`, `blurb` for each of the two sets. |
 
 ## Migration state
 
@@ -204,23 +213,11 @@ The live logo is `img/logo-white.png` — white, transparent background, 1080p w
 
 ## Brand
 
-Colours come from the logo: magenta `#E5007E`, cyan `#009EE2`, yellow `#FFEC00`, ink
-`#1D1D1B`, ground `#F3F2F2`. Type is Archivo throughout. `Brand.dc.html` in this project is
-the full design-system sheet — logo usage, colour roles, type scale, components, do/don'ts.
+Palette from the logo: magenta `#E5007E`, cyan `#009EE2`, yellow `#FFEC00`, ink `#1D1D1B`,
+ground `#F3F2F2`, white `#FFFFFF`. `Brand.dc.html` is the design-system sheet and
+`DESIGN-STATE.md` records how the front end uses them. Colour roles, typography and motion
+are design decisions and are not specified here.
 
-Each colour has one job, so nothing competes:
-
-| Colour | Role |
-| --- | --- |
-| Magenta | Section 1, breaking interfaces — band and its empty drop-slots |
-| Cyan | Section 2, amplifying place — band, empty drop-slots, and the footer |
-| Yellow | Project modals |
-| Ink | The About takeover |
-
-Empty cells inherit their section's colour rather than showing a grey placeholder. This is
-deliberate: a missing cover reads as a colour block, so the wall can ship before the
-photography exists.
-
-On yellow: as the full field behind colour photographs it fights badly. Use it as the modal's
-furniture — rules, meta line, close control, captions — against ink or ground. Worth building
-both and looking before committing.
+The one place brand and content touch: images are supplied **full colour, never
+pre-converted**, because any greyscale treatment is applied in code and needs the colour
+original underneath it.

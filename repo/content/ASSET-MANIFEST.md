@@ -38,10 +38,10 @@ These came off 2400–5000px originals and are genuinely the right image for the
 
 ## Empty — nothing exists
 
-`madheads` and `not-the-beatles` have no imagery in any folder. They render as coloured
-drop-slots, which the design handles well, so they can stay empty until you shoot something.
+`madheads` and `not-the-beatles` have no imagery in any folder. Their `cover` is an empty
+string, so they render as drop-slots until something is shot.
 
-`not-the-beatles` sits in a span-7 cell and will want a `wide.jpg` when it's shot.
+`not-the-beatles` sits in a span-7 cell and will want a `wide.jpg` too.
 
 ## Discarded
 
@@ -53,5 +53,5 @@ drop-slots, which the design handles well, so they can stay empty until you shoo
 ## Attribution
 
 `handprint-2012/cover.jpg` and `site/hero.jpg` are both Simon Kirwan photographs
-(the-lightbox.com), per the original filenames. They need a credit line wherever they appear.
-The schema has no field for image credit — worth adding one if you use them at hero size.
+(the-lightbox.com), per the original filenames. Carried as `imageCredit` on the project entry
+and on `images.hero` in `site.json`.

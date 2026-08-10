@@ -12,6 +12,7 @@
     "cover": "",
     "video": "",
     "credits": "",
+    "imageCredit": "",
     "images": []
   },
   {
@@ -25,13 +26,14 @@
     "section": 1,
     "span": 7,
     "cover": "img/projects/tilo-v2/cover.jpg",
+    "wide": "img/projects/tilo-v2/wide.jpg",
     "video": "",
     "credits": "",
+    "imageCredit": "",
     "images": [
       "img/projects/tilo-v2/01.jpg",
       "img/projects/tilo-v2/02.jpg"
-    ],
-    "wide": "img/projects/tilo-v2/wide.jpg"
+    ]
   },
   {
     "slug": "fantasia-express",
@@ -45,12 +47,13 @@
     "section": 1,
     "span": 8,
     "cover": "img/projects/fantasia-express/cover.jpg",
+    "wide": "img/projects/fantasia-express/wide.jpg",
     "video": "https://vimeo.com/328023473/79e68d3307",
     "credits": "With LNER, Corporation Pop and Immersive Storylab",
+    "imageCredit": "",
     "images": [
       "img/projects/fantasia-express/01.jpg"
-    ],
-    "wide": "img/projects/fantasia-express/wide.jpg"
+    ]
   },
   {
     "slug": "bigmouth",
@@ -65,6 +68,7 @@
     "cover": "img/projects/bigmouth/cover.jpg",
     "video": "https://vimeo.com/152872356",
     "credits": "Demon illustrations by Tomo. Spherical projection with Pufferfish Displays",
+    "imageCredit": "",
     "images": [
       "img/projects/bigmouth/cover.jpg"
     ]
@@ -82,6 +86,7 @@
     "cover": "img/projects/cakenocake/cover.jpg",
     "video": "https://vimeo.com/217890125",
     "credits": "",
+    "imageCredit": "",
     "images": [
       "img/projects/cakenocake/01.jpg"
     ]
@@ -99,6 +104,7 @@
     "cover": "img/projects/emofie/cover.jpg",
     "video": "https://vimeo.com/141946634",
     "credits": "Design by Clare Owens",
+    "imageCredit": "",
     "images": [
       "img/projects/emofie/01.jpg",
       "img/projects/emofie/02.jpg"
@@ -117,6 +123,7 @@
     "cover": "img/projects/when-i-grow-up/cover.jpg",
     "video": "https://vimeo.com/141851101",
     "credits": "",
+    "imageCredit": "",
     "images": [
       "img/projects/when-i-grow-up/cover.jpg"
     ]
@@ -134,6 +141,7 @@
     "cover": "img/projects/tilo-v1/cover.jpg",
     "video": "https://vimeo.com/103587266",
     "credits": "With Amaze and Pixel Inspiration. Research by the Creative Exchange, Lancaster University",
+    "imageCredit": "",
     "images": [
       "img/projects/tilo-v1/01.jpg",
       "img/projects/tilo-v1/02.jpg"
@@ -153,6 +161,7 @@
     "cover": "img/projects/humble-market/cover.jpg",
     "video": "https://youtu.be/ZL3KvwN7eJk",
     "credits": "With ZU UK",
+    "imageCredit": "",
     "images": [
       "img/projects/humble-market/01.jpg",
       "img/projects/humble-market/02.jpg",
@@ -172,6 +181,7 @@
     "cover": "img/projects/meyouandus-series/cover.jpg",
     "video": "https://vimeo.com/17595747",
     "credits": "",
+    "imageCredit": "",
     "images": [
       "img/projects/meyouandus-series/01.jpg",
       "img/projects/meyouandus-series/02.jpg"
@@ -191,6 +201,7 @@
     "cover": "",
     "video": "",
     "credits": "",
+    "imageCredit": "",
     "images": []
   },
   {
@@ -207,6 +218,7 @@
     "cover": "img/projects/homewalk/cover.jpg",
     "video": "",
     "credits": "",
+    "imageCredit": "",
     "images": [
       "img/projects/homewalk/01.jpg"
     ]
@@ -222,12 +234,13 @@
     "section": 2,
     "span": 8,
     "cover": "img/projects/kindred-spirits/cover.jpg",
+    "wide": "img/projects/kindred-spirits/wide.jpg",
     "video": "https://vimeo.com/101412008",
     "credits": "With Tate Collective and the Costumologists. Audio by Kepla",
+    "imageCredit": "",
     "images": [
       "img/projects/kindred-spirits/01.jpg"
-    ],
-    "wide": "img/projects/kindred-spirits/wide.jpg"
+    ]
   },
   {
     "slug": "sonic-market",
@@ -242,6 +255,7 @@
     "cover": "img/projects/sonic-market/cover.jpg",
     "video": "",
     "credits": "",
+    "imageCredit": "",
     "images": [
       "img/projects/sonic-market/01.jpg"
     ]
@@ -257,13 +271,14 @@
     "section": 2,
     "span": 8,
     "cover": "img/projects/invisible-arts-network/cover.jpg",
+    "wide": "img/projects/invisible-arts-network/wide.jpg",
     "video": "https://vimeo.com/241721109",
     "credits": "With Mash Cinema",
+    "imageCredit": "",
     "images": [
       "img/projects/invisible-arts-network/01.jpg",
       "img/projects/invisible-arts-network/02.jpg"
-    ],
-    "wide": "img/projects/invisible-arts-network/wide.jpg"
+    ]
   },
   {
     "slug": "handprint-2012",
@@ -278,6 +293,7 @@
     "cover": "img/projects/handprint-2012/cover.jpg",
     "video": "https://vimeo.com/198558083",
     "credits": "Part of WE PLAY, the North West's London 2012 legacy programme",
+    "imageCredit": "Simon Kirwan",
     "images": [
       "img/projects/handprint-2012/01.jpg",
       "img/projects/handprint-2012/02.jpg"
@@ -296,6 +312,7 @@
     "cover": "img/projects/townsend-lane/cover.jpg",
     "video": "https://vimeo.com/198558387",
     "credits": "Community engagement led by tenantspin with ABCC",
+    "imageCredit": "",
     "images": [
       "img/projects/townsend-lane/01.jpg",
       "img/projects/townsend-lane/02.jpg"
@@ -314,6 +331,7 @@
     "cover": "img/projects/wishing-well/cover.jpg",
     "video": "",
     "credits": "",
+    "imageCredit": "",
     "images": [
       "img/projects/wishing-well/01.jpg"
     ]
@@ -331,6 +349,7 @@
     "cover": "img/projects/lowry-to-life/cover.jpg",
     "video": "",
     "credits": "",
+    "imageCredit": "",
     "images": [
       "img/projects/lowry-to-life/cover.jpg"
     ]
@@ -348,6 +367,7 @@
     "cover": "img/projects/handprint-2008/cover.jpg",
     "video": "https://vimeo.com/12932359",
     "credits": "",
+    "imageCredit": "",
     "images": [
       "img/projects/handprint-2008/01.jpg"
     ]
