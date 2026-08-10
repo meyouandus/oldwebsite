@@ -1,0 +1,355 @@
+[
+  {
+    "slug": "madheads",
+    "title": "Madheads",
+    "year": "2023",
+    "place": "Manchester",
+    "commissioner": "Manchester Innovation Lab",
+    "blurb": "An R&D project built at Manchester Innovation Lab, testing how playful machine vision can turn a passing crowd into a collective portrait.",
+    "theme": "interface",
+    "section": 1,
+    "span": 5,
+    "cover": "",
+    "video": "",
+    "credits": "",
+    "images": []
+  },
+  {
+    "slug": "tilo-v2",
+    "title": "TILO v2",
+    "year": "2023",
+    "place": "Nottingham",
+    "commissioner": "Phoenix Arts Centre",
+    "blurb": "The second generation of TILO, our hybrid display system for arts and cultural venues — digital public space that holds a personalised, emotional dialogue with visitors.",
+    "theme": "interface",
+    "section": 1,
+    "span": 7,
+    "cover": "img/projects/tilo-v2/cover.jpg",
+    "video": "",
+    "credits": "",
+    "images": [
+      "img/projects/tilo-v2/01.jpg",
+      "img/projects/tilo-v2/02.jpg"
+    ],
+    "wide": "img/projects/tilo-v2/wide.jpg"
+  },
+  {
+    "slug": "fantasia-express",
+    "title": "Fantasia Express",
+    "year": "2019",
+    "place": "East Coast Main Line",
+    "commissioner": "Innovate UK — First of a Kind",
+    "blurb": "Twelve months of R&D into location-based augmented reality inside a moving train carriage, trialled for two weeks between London and Newcastle. Or: an alien spaceship sent to collect relics of our imagination.",
+    "theme": "interface",
+    "alsoTheme": "place",
+    "section": 1,
+    "span": 8,
+    "cover": "img/projects/fantasia-express/cover.jpg",
+    "video": "https://vimeo.com/328023473/79e68d3307",
+    "credits": "With LNER, Corporation Pop and Immersive Storylab",
+    "images": [
+      "img/projects/fantasia-express/01.jpg"
+    ],
+    "wide": "img/projects/fantasia-express/wide.jpg"
+  },
+  {
+    "slug": "bigmouth",
+    "title": "BIGMOUTH",
+    "year": "2016",
+    "place": "Liverpool",
+    "commissioner": "Metal — Liverpool Provocations",
+    "blurb": "A cross between a confessional and Room 101. People told the BIGMOUTH what was wrong with the world, then watched through an eyepiece as their words became the mouth of a small demon that carried the burden away.",
+    "theme": "interface",
+    "section": 1,
+    "span": 4,
+    "cover": "img/projects/bigmouth/cover.jpg",
+    "video": "https://vimeo.com/152872356",
+    "credits": "Demon illustrations by Tomo. Spherical projection with Pufferfish Displays",
+    "images": [
+      "img/projects/bigmouth/cover.jpg"
+    ]
+  },
+  {
+    "slug": "cakenocake",
+    "title": "Cakenocake",
+    "year": "2016",
+    "place": "Liverpool",
+    "commissioner": "Self-initiated",
+    "blurb": "A weekend on Liverpool high street with a signboard and no technology at all. Every question had two answers, and which side of the street you walked was how you gave yours.",
+    "theme": "interface",
+    "section": 1,
+    "span": 4,
+    "cover": "img/projects/cakenocake/cover.jpg",
+    "video": "https://vimeo.com/217890125",
+    "credits": "",
+    "images": [
+      "img/projects/cakenocake/01.jpg"
+    ]
+  },
+  {
+    "slug": "emofie",
+    "title": "Emofie",
+    "year": "2015–16",
+    "place": "Leicester",
+    "commissioner": "Phoenix Arts Centre",
+    "blurb": "Selfies crossed with emojis — a mobile app and a gallery installation in one. Strangers perform an emotion for the camera, make something daft with it, and walk on.",
+    "theme": "interface",
+    "section": 1,
+    "span": 4,
+    "cover": "img/projects/emofie/cover.jpg",
+    "video": "https://vimeo.com/141946634",
+    "credits": "Design by Clare Owens",
+    "images": [
+      "img/projects/emofie/01.jpg",
+      "img/projects/emofie/02.jpg"
+    ]
+  },
+  {
+    "slug": "when-i-grow-up",
+    "title": "When I Grow Up",
+    "year": "2014",
+    "place": "Leicester",
+    "commissioner": "Phoenix Arts Centre — Sparks festival",
+    "blurb": "Children picked a future self on an iPad and watched a hand-drawn avatar of it mirror their movements across the cafe video wall — then left it behind for the next visitor to wear.",
+    "theme": "interface",
+    "section": 1,
+    "span": 4,
+    "cover": "img/projects/when-i-grow-up/cover.jpg",
+    "video": "https://vimeo.com/141851101",
+    "credits": "",
+    "images": [
+      "img/projects/when-i-grow-up/cover.jpg"
+    ]
+  },
+  {
+    "slug": "tilo-v1",
+    "title": "TILO",
+    "year": "2013–15",
+    "place": "FACT Liverpool · Phoenix Leicester",
+    "commissioner": "Digital R&D Fund for the Arts",
+    "blurb": "A hybrid display system for cultural venues, and an attempt to make the screens in an arts building talk back — personalised, contextual, and aware of the weather outside.",
+    "theme": "interface",
+    "section": 1,
+    "span": 5,
+    "cover": "img/projects/tilo-v1/cover.jpg",
+    "video": "https://vimeo.com/103587266",
+    "credits": "With Amaze and Pixel Inspiration. Research by the Creative Exchange, Lancaster University",
+    "images": [
+      "img/projects/tilo-v1/01.jpg",
+      "img/projects/tilo-v1/02.jpg"
+    ]
+  },
+  {
+    "slug": "humble-market",
+    "title": "The Humble Market",
+    "year": "2012–14",
+    "place": "Liverpool · Preston · Belo Horizonte",
+    "commissioner": "FACT · London 2012 Cultural Olympiad",
+    "blurb": "Lead artists on a collaboration between four Brazilian and UK artists — a trading floor for things that can't be traded, staged at FACT, under a railway arch in Preston, and at the 2014 World Cup.",
+    "theme": "interface",
+    "alsoTheme": "place",
+    "section": 1,
+    "span": 4,
+    "cover": "img/projects/humble-market/cover.jpg",
+    "video": "https://youtu.be/ZL3KvwN7eJk",
+    "credits": "With ZU UK",
+    "images": [
+      "img/projects/humble-market/01.jpg",
+      "img/projects/humble-market/02.jpg",
+      "img/projects/humble-market/03.jpg"
+    ]
+  },
+  {
+    "slug": "meyouandus-series",
+    "title": "MeYouAndUs",
+    "year": "2010–12",
+    "place": "Liverpool · Salford · London · Brazil",
+    "commissioner": "FACT · BBC Big Screens · Robots and Avatars",
+    "blurb": "The series the practice is named after. A set of adaptable interactive artworks that ran on BBC big screens in three cities, in a Brazilian town square, and in a touring European exhibition.",
+    "theme": "interface",
+    "section": 1,
+    "span": 3,
+    "cover": "img/projects/meyouandus-series/cover.jpg",
+    "video": "https://vimeo.com/17595747",
+    "credits": "",
+    "images": [
+      "img/projects/meyouandus-series/01.jpg",
+      "img/projects/meyouandus-series/02.jpg"
+    ]
+  },
+  {
+    "slug": "not-the-beatles",
+    "title": "Not the Beatles Tour",
+    "year": "2024",
+    "place": "Liverpool",
+    "commissioner": "Self-initiated",
+    "blurb": "A walking tour of Liverpool that refuses to mention the obvious — the city's other stories, triggered by location on people's own phones as they walk.",
+    "theme": "place",
+    "alsoTheme": "interface",
+    "section": 2,
+    "span": 7,
+    "cover": "",
+    "video": "",
+    "credits": "",
+    "images": []
+  },
+  {
+    "slug": "homewalk",
+    "title": "Homewalk",
+    "year": "2022",
+    "place": "Nottingham",
+    "commissioner": "Phoenix Arts Centre",
+    "blurb": "A walk between where you are and where home is, made with people who have made that journey the hard way.",
+    "theme": "place",
+    "alsoTheme": "interface",
+    "section": 2,
+    "span": 5,
+    "cover": "img/projects/homewalk/cover.jpg",
+    "video": "",
+    "credits": "",
+    "images": [
+      "img/projects/homewalk/01.jpg"
+    ]
+  },
+  {
+    "slug": "kindred-spirits",
+    "title": "Kindred Spirits",
+    "year": "2014",
+    "place": "Tate Liverpool",
+    "commissioner": "Tate Liverpool",
+    "blurb": "An evening takeover of Tate Liverpool built from Mondrian. Visitors chose a colour, made a costume, sat for a photobooth, and found themselves on a wall of thirty-six screens beside everyone who chose the same.",
+    "theme": "place",
+    "section": 2,
+    "span": 8,
+    "cover": "img/projects/kindred-spirits/cover.jpg",
+    "video": "https://vimeo.com/101412008",
+    "credits": "With Tate Collective and the Costumologists. Audio by Kepla",
+    "images": [
+      "img/projects/kindred-spirits/01.jpg"
+    ],
+    "wide": "img/projects/kindred-spirits/wide.jpg"
+  },
+  {
+    "slug": "sonic-market",
+    "title": "Sonic Market",
+    "year": "2017",
+    "place": "Brighton",
+    "commissioner": "Brighton Digital Festival",
+    "blurb": "Every hour the market's own sounds are collected, bent by live weather data, and returned quietly to the space that made them — turning the whole market into an unpredictable instrument.",
+    "theme": "place",
+    "section": 2,
+    "span": 4,
+    "cover": "img/projects/sonic-market/cover.jpg",
+    "video": "",
+    "credits": "",
+    "images": [
+      "img/projects/sonic-market/01.jpg"
+    ]
+  },
+  {
+    "slug": "invisible-arts-network",
+    "title": "Invisible Arts Network",
+    "year": "2017",
+    "place": "Herefordshire",
+    "commissioner": "Rural Media",
+    "blurb": "A six-month residency mapping the art already happening in a county that doesn't call it art, launched with The Happening — a day conference that turned into a psychedelic party with 360 cinema and VR.",
+    "theme": "place",
+    "section": 2,
+    "span": 8,
+    "cover": "img/projects/invisible-arts-network/cover.jpg",
+    "video": "https://vimeo.com/241721109",
+    "credits": "With Mash Cinema",
+    "images": [
+      "img/projects/invisible-arts-network/01.jpg",
+      "img/projects/invisible-arts-network/02.jpg"
+    ],
+    "wide": "img/projects/invisible-arts-network/wide.jpg"
+  },
+  {
+    "slug": "handprint-2012",
+    "title": "Handprint 2012",
+    "year": "2012",
+    "place": "Preston · Salford · Trafford",
+    "commissioner": "NW Cultural Olympiad",
+    "blurb": "Online interventions and live events across the North West, ending with four projectors throwing hundreds of scanned hands onto a railway bridge in Avenham Park — where they appeared to rise out of the water.",
+    "theme": "place",
+    "section": 2,
+    "span": 4,
+    "cover": "img/projects/handprint-2012/cover.jpg",
+    "video": "https://vimeo.com/198558083",
+    "credits": "Part of WE PLAY, the North West's London 2012 legacy programme",
+    "images": [
+      "img/projects/handprint-2012/01.jpg",
+      "img/projects/handprint-2012/02.jpg"
+    ]
+  },
+  {
+    "slug": "townsend-lane",
+    "title": "26:14:17",
+    "year": "2012",
+    "place": "Townsend Lane, Liverpool",
+    "commissioner": "NHS Liverpool — permanent commission",
+    "blurb": "A permanent installation in a health centre waiting room. Seventy-two local people filmed waiting at bus stops on hot summer days, playing to the people waiting inside — bus routes as the arteries of a community.",
+    "theme": "place",
+    "section": 2,
+    "span": 3,
+    "cover": "img/projects/townsend-lane/cover.jpg",
+    "video": "https://vimeo.com/198558387",
+    "credits": "Community engagement led by tenantspin with ABCC",
+    "images": [
+      "img/projects/townsend-lane/01.jpg",
+      "img/projects/townsend-lane/02.jpg"
+    ]
+  },
+  {
+    "slug": "wishing-well",
+    "title": "Wishing Well",
+    "year": "2012",
+    "place": "Mere Lane, Liverpool",
+    "commissioner": "NHS Liverpool — permanent commission",
+    "blurb": "A permanent interactive installation in the courtyard garden of a new-build health centre, made through community workshops as part of Liverpool's Decade of Health and Wellbeing.",
+    "theme": "place",
+    "section": 2,
+    "span": 3,
+    "cover": "img/projects/wishing-well/cover.jpg",
+    "video": "",
+    "credits": "",
+    "images": [
+      "img/projects/wishing-well/01.jpg"
+    ]
+  },
+  {
+    "slug": "lowry-to-life",
+    "title": "Lowry to Life",
+    "year": "2011",
+    "place": "Salford · MediaCityUK",
+    "commissioner": "University of Salford",
+    "blurb": "Two linked installations on opposite sides of the city, built from L.S. Lowry's 1954 painting of Piccadilly Gardens, made to mark the University of Salford's move to MediaCityUK.",
+    "theme": "place",
+    "section": 2,
+    "span": 3,
+    "cover": "img/projects/lowry-to-life/cover.jpg",
+    "video": "",
+    "credits": "",
+    "images": [
+      "img/projects/lowry-to-life/cover.jpg"
+    ]
+  },
+  {
+    "slug": "handprint-2008",
+    "title": "Handprint",
+    "year": "2008",
+    "place": "Manchester",
+    "commissioner": "Arts Council England",
+    "blurb": "Four nights of live hand projection onto Manchester's second tallest building. The first Handprint, and the work the 2012 Cultural Olympiad commission grew out of.",
+    "theme": "place",
+    "section": 2,
+    "span": 3,
+    "cover": "img/projects/handprint-2008/cover.jpg",
+    "video": "https://vimeo.com/12932359",
+    "credits": "",
+    "images": [
+      "img/projects/handprint-2008/01.jpg"
+    ]
+  }
+]
