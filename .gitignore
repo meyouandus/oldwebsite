@@ -1,0 +1,30 @@
+.DS_Store
+
+# WordPress core, admin, plugins, themes -- not needed as design reference
+public_html/wp-admin/
+public_html/wp-includes/
+public_html/wp-content/plugins/
+public_html/wp-content/mu-plugins/
+public_html/wp-content/upgrade/
+public_html/wp-content/themes/
+public_html/wp-*.php
+public_html/xmlrpc.php
+public_html/cgi-bin/
+public_html/license.txt
+public_html/readme.html
+public_html/test.txt
+public_html/.htaccess
+public_html/.htaccess.orig
+
+# Secrets
+public_html/wp-config.php
+
+# Database dumps / snapshots
+public_html/*.sql
+public_html/wp-snapshots/
+
+# Oversized archive (exceeds GitHub's 100MB file limit anyway)
+public_html/*.zip
+
+# Security-scan artifacts, not media assets
+public_html/wp-content/uploads/profiles/
