@@ -9,8 +9,9 @@
     "theme": "interface",
     "section": 1,
     "span": 5,
-    "cover": "",
+    "cover": "img/projects/bigheads/bigheads-cover.jpg",
     "video": "https://vimeo.com/1055209666",
+    "poster": "",
     "credits": "Originally titled Madheads",
     "imageCredit": "",
     "images": []
@@ -25,14 +26,15 @@
     "theme": "interface",
     "section": 1,
     "span": 7,
-    "cover": "img/projects/tilo-v2/cover.jpg",
-    "wide": "img/projects/tilo-v2/wide.jpg",
+    "cover": "img/projects/tilo-v2/tilo-v2-cover.jpg",
+    "wide": "img/projects/tilo-v2/tilo-v2-wide.jpg",
     "video": "",
+    "poster": "",
     "credits": "",
     "imageCredit": "",
     "images": [
-      "img/projects/tilo-v2/01.jpg",
-      "img/projects/tilo-v2/02.jpg"
+      "img/projects/tilo-v2/tilo-v2-01.jpg",
+      "img/projects/tilo-v2/tilo-v2-02.jpg"
     ]
   },
   {
@@ -46,13 +48,14 @@
     "alsoTheme": "place",
     "section": 1,
     "span": 8,
-    "cover": "img/projects/fantasia-express/cover.jpg",
-    "wide": "img/projects/fantasia-express/wide.jpg",
+    "cover": "img/projects/fantasia-express/fantasia-express-cover.jpg",
+    "wide": "img/projects/fantasia-express/fantasia-express-wide.jpg",
     "video": "https://vimeo.com/328023473",
+    "poster": "",
     "credits": "With LNER, Corporation Pop and Immersive Storylab",
     "imageCredit": "",
     "images": [
-      "img/projects/fantasia-express/01.jpg"
+      "img/projects/fantasia-express/fantasia-express-01.jpg"
     ]
   },
   {
@@ -65,12 +68,13 @@
     "theme": "interface",
     "section": 1,
     "span": 4,
-    "cover": "img/projects/bigmouth/cover.jpg",
+    "cover": "img/projects/bigmouth/bigmouth-cover.jpg",
     "video": "https://vimeo.com/152872356",
+    "poster": "",
     "credits": "Demon illustrations by Tomo. Spherical projection with Pufferfish Displays",
     "imageCredit": "",
     "images": [
-      "img/projects/bigmouth/cover.jpg"
+      "img/projects/bigmouth/bigmouth-cover.jpg"
     ]
   },
   {
@@ -79,16 +83,17 @@
     "year": "2016",
     "place": "Liverpool",
     "commissioner": "Self-initiated",
-    "blurb": "A weekend on Liverpool's high street with a signboard and no technology at all. Each question had two answers. GOD or NO GOD, cake or no cake, and which side of the street you walked was how you voted. The purest interface we've ever built is a pavement. People who would never touch a gallery installation found themselves taking a public position on the way to the shops, and arguing about it with strangers.",
+    "blurb": "A weekend on Liverpool's high street with a signboard and no technology at all. Each question had two answers. TRUMP or NO TRUMP, GOD or NO GOD, cake or no cake, and which side of the street you walked was how you voted. The purest interface we've ever built is a pavement. People who would never touch a gallery installation found themselves taking a public position on the way to the shops, and arguing about it with strangers.",
     "theme": "interface",
     "section": 1,
     "span": 4,
-    "cover": "img/projects/cakenocake/cover.jpg",
+    "cover": "img/projects/cakenocake/cakenocake-cover.jpg",
     "video": "https://vimeo.com/216987459",
+    "poster": "img/projects/cakenocake/cakenocake-poster.jpg",
     "credits": "Music: Scaredy Cats, 'Equilibrium'",
     "imageCredit": "",
     "images": [
-      "img/projects/cakenocake/01.jpg"
+      "img/projects/cakenocake/cakenocake-01.jpg"
     ]
   },
   {
@@ -101,13 +106,14 @@
     "theme": "interface",
     "section": 1,
     "span": 4,
-    "cover": "img/projects/emofie/cover.jpg",
+    "cover": "img/projects/emofie/emofie-cover.jpg",
     "video": "https://vimeo.com/141946634",
+    "poster": "",
     "credits": "Design by Clare Owens",
     "imageCredit": "",
     "images": [
-      "img/projects/emofie/01.jpg",
-      "img/projects/emofie/02.jpg"
+      "img/projects/emofie/emofie-01.jpg",
+      "img/projects/emofie/emofie-02.jpg"
     ]
   },
   {
@@ -120,12 +126,13 @@
     "theme": "interface",
     "section": 1,
     "span": 4,
-    "cover": "img/projects/when-i-grow-up/cover.jpg",
+    "cover": "img/projects/when-i-grow-up/when-i-grow-up-cover.jpg",
     "video": "https://vimeo.com/1217362808",
+    "poster": "img/projects/when-i-grow-up/when-i-grow-up-poster.jpg",
     "credits": "Music: Chilly Gonzales, 'White Keys'",
     "imageCredit": "",
     "images": [
-      "img/projects/when-i-grow-up/cover.jpg"
+      "img/projects/when-i-grow-up/when-i-grow-up-01.jpg"
     ]
   },
   {
@@ -138,13 +145,14 @@
     "theme": "interface",
     "section": 1,
     "span": 5,
-    "cover": "img/projects/tilo-v1/cover.jpg",
+    "cover": "img/projects/tilo-v1/tilo-v1-cover.jpg",
     "video": "https://vimeo.com/103587266",
+    "poster": "img/projects/tilo-v1/tilo-v1-poster.jpg",
     "credits": "With Amaze and Pixel Inspiration. Research by the Creative Exchange, Lancaster University. Music: Luke Howard",
     "imageCredit": "",
     "images": [
-      "img/projects/tilo-v1/01.jpg",
-      "img/projects/tilo-v1/02.jpg"
+      "img/projects/tilo-v1/tilo-v1-01.jpg",
+      "img/projects/tilo-v1/tilo-v1-02.jpg"
     ]
   },
   {
@@ -158,14 +166,15 @@
     "alsoTheme": "place",
     "section": 1,
     "span": 4,
-    "cover": "img/projects/humble-market/cover.jpg",
+    "cover": "img/projects/humble-market/humble-market-cover.jpg",
     "video": "https://vimeo.com/1217351938",
+    "poster": "",
     "credits": "With ZU UK",
     "imageCredit": "",
     "images": [
-      "img/projects/humble-market/01.jpg",
-      "img/projects/humble-market/02.jpg",
-      "img/projects/humble-market/03.jpg"
+      "img/projects/humble-market/humble-market-01.jpg",
+      "img/projects/humble-market/humble-market-02.jpg",
+      "img/projects/humble-market/humble-market-03.jpg"
     ]
   },
   {
@@ -178,13 +187,14 @@
     "theme": "interface",
     "section": 1,
     "span": 3,
-    "cover": "img/projects/meyouandus-series/cover.jpg",
+    "cover": "img/projects/meyouandus-series/meyouandus-series-cover.jpg",
     "video": "https://vimeo.com/198557794",
+    "poster": "",
     "credits": "",
     "imageCredit": "",
     "images": [
-      "img/projects/meyouandus-series/01.jpg",
-      "img/projects/meyouandus-series/02.jpg"
+      "img/projects/meyouandus-series/meyouandus-series-01.jpg",
+      "img/projects/meyouandus-series/meyouandus-series-02.jpg"
     ]
   },
   {
@@ -198,8 +208,10 @@
     "alsoTheme": "interface",
     "section": 2,
     "span": 7,
-    "cover": "",
+    "cover": "img/projects/not-the-beatles/not-the-beatles-cover.jpg",
+    "wide": "img/projects/not-the-beatles/not-the-beatles-wide.jpg",
     "video": "https://vimeo.com/1217365339",
+    "poster": "",
     "credits": "",
     "imageCredit": "",
     "images": []
@@ -215,12 +227,13 @@
     "alsoTheme": "interface",
     "section": 2,
     "span": 5,
-    "cover": "img/projects/homewalk/cover.jpg",
+    "cover": "img/projects/homewalk/homewalk-cover.jpg",
     "video": "https://vimeo.com/1217362315",
+    "poster": "img/projects/homewalk/homewalk-poster.jpg",
     "credits": "",
     "imageCredit": "",
     "images": [
-      "img/projects/homewalk/01.jpg"
+      "img/projects/homewalk/homewalk-01.jpg"
     ]
   },
   {
@@ -233,13 +246,14 @@
     "theme": "place",
     "section": 2,
     "span": 8,
-    "cover": "img/projects/kindred-spirits/cover.jpg",
-    "wide": "img/projects/kindred-spirits/wide.jpg",
+    "cover": "img/projects/kindred-spirits/kindred-spirits-cover.jpg",
+    "wide": "img/projects/kindred-spirits/kindred-spirits-wide.jpg",
     "video": "https://vimeo.com/101412008",
+    "poster": "",
     "credits": "With Tate Collective and the Costumologists. Audio by Kepla",
     "imageCredit": "",
     "images": [
-      "img/projects/kindred-spirits/01.jpg"
+      "img/projects/kindred-spirits/kindred-spirits-01.jpg"
     ]
   },
   {
@@ -252,12 +266,13 @@
     "theme": "place",
     "section": 2,
     "span": 4,
-    "cover": "img/projects/sonic-market/cover.jpg",
+    "cover": "img/projects/sonic-market/sonic-market-cover.jpg",
     "video": "",
+    "poster": "",
     "credits": "",
     "imageCredit": "",
     "images": [
-      "img/projects/sonic-market/01.jpg"
+      "img/projects/sonic-market/sonic-market-01.jpg"
     ]
   },
   {
@@ -270,14 +285,15 @@
     "theme": "place",
     "section": 2,
     "span": 8,
-    "cover": "img/projects/invisible-arts-network/cover.jpg",
-    "wide": "img/projects/invisible-arts-network/wide.jpg",
+    "cover": "img/projects/invisible-arts-network/invisible-arts-network-cover.jpg",
+    "wide": "img/projects/invisible-arts-network/invisible-arts-network-wide.jpg",
     "video": "https://vimeo.com/672842017",
+    "poster": "img/projects/invisible-arts-network/invisible-arts-network-poster.jpg",
     "credits": "With Mash Cinema",
     "imageCredit": "",
     "images": [
-      "img/projects/invisible-arts-network/01.jpg",
-      "img/projects/invisible-arts-network/02.jpg"
+      "img/projects/invisible-arts-network/invisible-arts-network-01.jpg",
+      "img/projects/invisible-arts-network/invisible-arts-network-02.jpg"
     ]
   },
   {
@@ -290,13 +306,14 @@
     "theme": "place",
     "section": 2,
     "span": 4,
-    "cover": "img/projects/handprint-2012/cover.jpg",
+    "cover": "img/projects/handprint-2012/handprint-2012-cover.jpg",
     "video": "https://vimeo.com/198558083",
+    "poster": "img/projects/handprint-2012/handprint-2012-poster.jpg",
     "credits": "Part of WE PLAY, the North West's London 2012 legacy programme",
     "imageCredit": "Simon Kirwan",
     "images": [
-      "img/projects/handprint-2012/01.jpg",
-      "img/projects/handprint-2012/02.jpg"
+      "img/projects/handprint-2012/handprint-2012-01.jpg",
+      "img/projects/handprint-2012/handprint-2012-02.jpg"
     ]
   },
   {
@@ -309,13 +326,14 @@
     "theme": "place",
     "section": 2,
     "span": 3,
-    "cover": "img/projects/townsend-lane/cover.jpg",
+    "cover": "img/projects/townsend-lane/townsend-lane-cover.jpg",
     "video": "https://vimeo.com/1217363736",
+    "poster": "img/projects/townsend-lane/townsend-lane-poster.jpg",
     "credits": "Community engagement led by tenantspin with ABCC",
     "imageCredit": "",
     "images": [
-      "img/projects/townsend-lane/01.jpg",
-      "img/projects/townsend-lane/02.jpg"
+      "img/projects/townsend-lane/townsend-lane-01.jpg",
+      "img/projects/townsend-lane/townsend-lane-02.jpg"
     ]
   },
   {
@@ -328,12 +346,13 @@
     "theme": "place",
     "section": 2,
     "span": 3,
-    "cover": "img/projects/wishing-well/cover.jpg",
+    "cover": "img/projects/wishing-well/wishing-well-cover.jpg",
     "video": "",
+    "poster": "",
     "credits": "",
     "imageCredit": "",
     "images": [
-      "img/projects/wishing-well/01.jpg"
+      "img/projects/wishing-well/wishing-well-01.jpg"
     ]
   },
   {
@@ -346,12 +365,13 @@
     "theme": "place",
     "section": 2,
     "span": 3,
-    "cover": "img/projects/lowry-to-life/cover.jpg",
+    "cover": "img/projects/lowry-to-life/lowry-to-life-cover.jpg",
     "video": "https://vimeo.com/166343780",
+    "poster": "",
     "credits": "",
     "imageCredit": "",
     "images": [
-      "img/projects/lowry-to-life/cover.jpg"
+      "img/projects/lowry-to-life/lowry-to-life-cover.jpg"
     ]
   },
   {
@@ -364,12 +384,13 @@
     "theme": "place",
     "section": 2,
     "span": 3,
-    "cover": "img/projects/handprint-2008/cover.jpg",
+    "cover": "img/projects/handprint-2008/handprint-2008-cover.jpg",
     "video": "https://vimeo.com/12932359",
+    "poster": "",
     "credits": "",
     "imageCredit": "",
     "images": [
-      "img/projects/handprint-2008/01.jpg"
+      "img/projects/handprint-2008/handprint-2008-01.jpg"
     ]
   }
 ]

@@ -8,6 +8,26 @@ Read `content/ASSET-SPEC.md` for the full contract. This file is what changed.
 
 ## Since the last export
 
+**Filenames are self-describing now.** `img/projects/tilo-v1/tilo-v1-cover.jpg` rather than
+`.../cover.jpg`, and the site images are `myu-hero.jpg` and `myu-bleed.jpg`. A file still
+identifies itself once it's been downloaded, emailed or dropped into a deck. All paths in the
+JSON changed with them.
+
+**New field: `poster`.** A self-hosted still, 2400 x 1350, for the film. Show it immediately
+with a play control over it and inject the Vimeo iframe only on click. Vimeo's own thumbnail
+sits inside the iframe, so on a cold load it arrives a second or two late and the visitor
+looks at an empty rectangle. Doing it this way also keeps the player script and its cookies
+off the page until someone asks for the film. **Empty string means fall back to `cover`.**
+Seven projects have one cut from the film; the rest fall back.
+
+**All copy follows `language.md`**, now in the repo root. No em dashes anywhere in the three
+JSON files. Blurbs run 52-88 words, up from the 30-45 the modal was styled around, so the
+display size will need a look.
+
+**Two placeholder images.** `bigheads-cover.jpg` and the two `not-the-beatles` files are
+obvious grey placeholders with the filename printed on them. Alastair replaces the files
+directly, no JSON change needed.
+
 **Video is now populated and verified.** 18 of 20 projects carry a film, each URL checked
 against Vimeo's oEmbed endpoint rather than taken on trust. YouTube is gone entirely.
 

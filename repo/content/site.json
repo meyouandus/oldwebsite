@@ -2,12 +2,12 @@
   "tagline": "Breaking interfaces and amplifying place",
   "images": {
     "hero": {
-      "src": "img/site/hero.jpg",
+      "src": "img/site/myu-hero.jpg",
       "imageCredit": "Simon Kirwan",
       "alt": "Hundreds of scanned handprints projected onto a railway bridge at night, reflected in the water below"
     },
     "bleed": {
-      "src": "img/site/bleed.jpg",
+      "src": "img/site/myu-bleed.jpg",
       "imageCredit": "",
       "alt": "Aerial view at night of a lit outdoor event site, projections and a glowing dome"
     }

@@ -17,17 +17,21 @@ content/
   site.json               tagline, the two site images, section headings and blurbs
 img/
   site/
-    hero.jpg              2560 x 1440 (16:9). The landing photograph.
-    bleed.jpg             2560 x 1440 (16:9). The second full-bleed photograph.
+    myu-hero.jpg          2560 x 1440 (16:9). The landing photograph.
+    myu-bleed.jpg         2560 x 1440 (16:9). The second full-bleed photograph.
   projects/
     <slug>/
-      cover.jpg           2400 x 1600 (3:2)  — the mosaic wall
-      wide.jpg            2400 x  860 (2.8:1) — OPTIONAL. Used instead of cover.jpg when
-                                                present, for projects in a wide cell
-                                                (span 7 or 8)
-      01.jpg 02.jpg 03.jpg…  2400px on the long edge, any ratio — the project gallery,
-                            numbered in display order, no fixed limit
+      <slug>-cover.jpg    2400 x 1600 (3:2). The mosaic wall.
+      <slug>-wide.jpg     2400 x 860 (2.8:1). Optional, used instead of the cover for
+                          projects in a wide cell (span 7 or 8).
+      <slug>-poster.jpg   2400 x 1350 (16:9). Optional. The still shown in place of the
+                          film until someone presses play.
+      <slug>-01.jpg ...   2400px on the long edge, any ratio. The project gallery,
+                          numbered in display order, no fixed limit.
 ```
+
+Filenames repeat the slug so a file still identifies itself once it leaves the folder. The
+folder groups, the filename identifies. Lowercase, hyphens, no underscores.
 
 `<slug>` is lowercase, hyphenated, and must match `slug` in the JSON. Current slugs, by
 section:
@@ -47,7 +51,7 @@ section:
 - Keep the subject centred — cells crop from the centre with `object-fit: cover`.
 - Long edge 2400px; the two site images 2560px. Aim under 400KB per file.
 
-## Cell widths (why `wide.jpg` exists)
+## Cell widths (why the wide crop exists)
 
 The wall is a 12-column grid, row height `clamp(190px, 21vw, 380px)`, zero gaps. At a 1440px
 window each cell lands at roughly:
@@ -100,13 +104,14 @@ An array of 20. Array order is wall order, within `section` order.
     "alsoTheme": "interface",
     "section": 2,
     "span": 7,
-    "cover": "img/projects/not-the-beatles/cover.jpg",
-    "wide": "img/projects/not-the-beatles/wide.jpg",
+    "cover": "img/projects/not-the-beatles/not-the-beatles-cover.jpg",
+    "wide": "img/projects/not-the-beatles/not-the-beatles-wide.jpg",
     "video": "https://vimeo.com/000000000",
+    "poster": "img/projects/not-the-beatles/not-the-beatles-poster.jpg",
     "credits": "With So-and-so",
     "images": [
-      "img/projects/not-the-beatles/01.jpg",
-      "img/projects/not-the-beatles/02.jpg"
+      "img/projects/not-the-beatles/not-the-beatles-01.jpg",
+      "img/projects/not-the-beatles/not-the-beatles-02.jpg"
     ]
   }
 ]
@@ -126,7 +131,8 @@ An array of 20. Array order is wall order, within `section` order.
 | `span` | 3–8. Rows must total 12, and each section must total a multiple of 12. |
 | `cover` | The project's wall image. Empty string means no image exists yet. |
 | `wide` | Panoramic 2.8:1 crop, supplied for span-7/8 projects. Takes precedence over `cover` on the wall. |
-| `video` | Vimeo URL, always in full `https://vimeo.com/<id>/<hash>` form. Empty string when there isn't one. See below. |
+| `video` | Vimeo share URL. Empty string when there isn't one. See below. |
+| `poster` | Self-hosted still for the film, 2400 x 1350. **Empty string means fall back to `cover`.** Never leave the player to supply its own. See below. |
 | `credits` | Collaborators line. Empty string when there isn't one. |
 | `imageCredit` | Photographer credit for the project's images. Empty string when not required. Currently only `handprint-2012` (Simon Kirwan). |
 | `images` | Gallery files, **no fixed maximum**. Per `DESIGN-STATE.md` the first sets at 21:9 full width and the rest at 3:2 half width, so an odd count after the first leaves a half-width orphan — supply 1, 3, 5, 7… total where possible. Empty array means none exist. |
@@ -154,9 +160,22 @@ it achieves the curation goal with no privacy hash to carry, so the URL stays a 
 `vimeo.com/<id>`. Its one cost is that there's no vimeo.com page to send anyone; the film
 exists only as an embed. Use Unlisted instead where a sendable link is wanted.
 
-None of these is a security control — an embedded film is visible to anyone who loads the page.
+None of these is a security control. An embedded film is visible to anyone who loads the page.
 Anything genuinely not for public view should be Private on Vimeo and absent from
 `projects.json`.
+
+### Posters
+
+A film should never open on an empty rectangle. Vimeo's own thumbnail lives inside the player
+iframe, which is a third-party request, so on a cold load it arrives a second or two late. The
+poster is our image, on our domain, outside the iframe. Show it immediately with a play
+control over it, and only inject the iframe when someone presses play. The film then loads on
+demand, and Vimeo's player script and cookies stay off the page until the visitor asks for
+them.
+
+`poster` is a sibling field rather than part of a video object, so it reads the same way as
+`credits` and `imageCredit`. When it's empty, fall back to `cover`. Seven projects have a
+poster cut from the film itself. The rest fall back until better material exists.
 
 ## content/about.json
 

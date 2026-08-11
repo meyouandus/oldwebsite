@@ -7,21 +7,12 @@ Three things block others and are marked **↑blocker**.
 
 ---
 
-## A. File naming — one pass, all at once ↑blocker
+## A. File naming - DONE 11 Aug
 
-Agreed direction: keep the folders, make the filenames self-describing. Blocks B and any
-further asset work, because doing it twice is the only expensive way to do it.
-
-| ID | Item |
-| --- | --- |
-| A1 | Rename 48 image files to `<slug>-cover.jpg`, `<slug>-wide.jpg`, `<slug>-01.jpg` |
-| A2 | Rename the two site images to `myu-hero.jpg` / `myu-bleed.jpg` — they have no slug to inherit |
-| A3 | Rewrite `cover` / `wide` / `images` paths in `projects.json` to match |
-| A4 | Rewrite `images.hero.src` / `images.bleed.src` in `site.json` |
-| A5 | Update the file-tree example in `ASSET-SPEC.md` and the naming rule alongside it |
-| A6 | Re-verify every path resolves, then rebuild `repo/` |
-
-**Do it before anything is published.** After that, every rename is a broken link somewhere.
+Kept the folders, made the filenames self-describing. 49 files renamed to
+`<slug>-cover.jpg`, `<slug>-wide.jpg`, `<slug>-01.jpg`, and the two site images to
+`myu-hero.jpg` and `myu-bleed.jpg`. Paths rewritten in `projects.json` and `site.json`, the
+spec updated, all 51 references verified. No generic filenames remain.
 
 ---
 
@@ -73,8 +64,8 @@ Anything genuinely not for public view should be Private on Vimeo and absent fro
 
 | ID | Question |
 | --- | --- |
-| B1 | Does `video` stay a bare URL, or become `{ url, poster, title, duration }`? |
-| B2 | Poster frames — **see the note below.** Recommendation: a self-hosted `poster` image per film |
+| ~~B1~~ | **Settled 11 Aug.** `video` stays a bare URL. `poster` is a sibling field, matching `credits` and `imageCredit`. Title and duration come from Vimeo's API at build time if ever needed |
+| ~~B2~~ | **Settled 11 Aug.** Self-hosted posters, 2400 x 1350, shown outside the iframe with the player injected on click. Seven cut from local masters; the rest fall back to `cover` |
 
 ### Poster frames (B2)
 
@@ -117,7 +108,7 @@ from "embed an iframe" to "show an image, then embed on click".
 | B9 | Re-check the 11 existing films after any privacy change — switching a public film to unlisted **issues a hash**, so every one of those URLs in `projects.json` will need updating |
 | B10 | 2.3GB of masters across `ART/`, `maybe/`, `HYBRID/`, `CHINA/`, `COMMERCIAL/` with names like `phoenix-update.mp4 (720p).mp4` and `RecordIt-28484B78-….MP4`. If A is worth doing for images, the masters deserve it more — they're the irreplaceable originals |
 | B11 | Decide where masters live long-term. They must not go in the site repo |
-| B12 | If B2 lands on self-hosted posters: choose a frame per film and produce `<slug>-poster.jpg` at 2400px. I can pull frames from the local masters for the films we hold, but not for anything that only exists on Vimeo |
+| B12 | **Ten films still need a poster** - `bigheads`, `fantasia-express`, `bigmouth`, `emofie`, `humble-market`, `meyouandus-series`, `not-the-beatles`, `kindred-spirits`, `lowry-to-life`, `handprint-2008`. All exist on Vimeo only, so I can't cut frames. They fall back to `cover` until a still arrives |
 
 ---
 
@@ -129,7 +120,7 @@ from "embed an iframe" to "show an image, then embed on click".
 | C2 | `bigheads` — no imagery at all | Renders as an empty cell |
 | C3 | `not-the-beatles` — no imagery at all | Needs a `wide` too, it's in a span-7 cell |
 | C4 | `bigmouth` — 640×360 upscaled 3.75× | Soft. Vimeo holds a larger still of the same frame |
-| C5 | `when-i-grow-up` — 1200×600 source | Under half spec |
+| ~~C5~~ | ~~`when-i-grow-up`~~ | **Done 11 Aug.** Replaced with a frame off the 4K master of the 2023 restaging, showing a child and adult at the screen. Gallery image added from the same source |
 | C6 | `tilo-v2` — video frame grab, dark | Also unconfirmed, see D1 |
 | C7 | `homewalk` — video frame grab | Acceptable, but a still would be better |
 | C8 | `fantasia-express` — square original | The span-8 wide crop is a narrow band of it |
@@ -197,7 +188,7 @@ From `DESIGN-STATE.md`, not ours to do, but they gate what content is visible:
 
 ## Suggested order
 
-1. **A** in one sitting — it blocks everything and gets cheaper never.
+1. ~~**A**~~ done.
 2. **D**, because five of the seven are one-line answers that unblock other items.
 3. **B6–B9** as one Vimeo session: set privacy, check embed settings, upload the missing
    films, then collect every URL in its final hashed form and update the JSON once. Doing the
