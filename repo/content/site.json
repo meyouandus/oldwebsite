@@ -1,6 +1,5 @@
 {
   "tagline": "Breaking interfaces and amplifying place",
-
   "images": {
     "hero": {
       "src": "img/site/hero.jpg",
@@ -13,19 +12,18 @@
       "alt": "Aerial view at night of a lit outdoor event site, projections and a glowing dome"
     }
   },
-
   "sections": [
     {
       "id": 1,
       "theme": "interface",
       "heading": "Breaking interfaces",
-      "blurb": "We take the technology people use without thinking — screens, sensors, phones, ticket gates — and bend it into something that makes strangers talk to each other."
+      "blurb": "We take the technology people use without thinking - screens, sensors, phones, ticket gates - and bend it into something that makes strangers talk to each other."
     },
     {
       "id": 2,
       "theme": "place",
       "heading": "Amplifying place",
-      "blurb": "Work made for one specific street, market, waiting room or station — built with the people who already use it."
+      "blurb": "Work made for one specific street, market, waiting room or station - built with the people who already use it."
     }
   ]
 }

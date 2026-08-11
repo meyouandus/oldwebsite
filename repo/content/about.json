@@ -3,47 +3,138 @@
     "MeYouAndUs are a media arts practice and organisation founded by Alastair Eilbeck and James Bailey in 2011.",
     "They create artworks that act as interventions in public spaces, physical and digital. They encourage participation and co-creation. Many of the works are site specific and all involve varying degrees of code, video and hardware. Although technology driven, the art always contains a strong conceptual and human element."
   ],
-
   "showreel": {
     "url": "https://vimeo.com/124827585",
     "caption": "Nine minutes of art we love or that has inspired us, alongside a selection of our own."
   },
-
   "contact": {
     "email": "info@meyouandus.co.uk",
     "base": "Liverpool / Manchester",
     "links": []
   },
-
   "works": [
-    { "date": "2024", "title": "Not the Beatles Tour", "detail": "Location-triggered walking tour, self-initiated, Liverpool", "slug": "not-the-beatles" },
-    { "date": "2023", "title": "Madheads", "detail": "R&D project, Manchester Innovation Lab, Manchester", "slug": "madheads" },
-    { "date": "2023", "title": "TILO v2", "detail": "Second-generation hybrid display system, Phoenix Arts Centre, Nottingham", "slug": "tilo-v2" },
-    { "date": "2022", "title": "Homewalk", "detail": "Located walk, Phoenix Arts Centre, Nottingham", "slug": "homewalk" },
-    { "date": "Feb 2019", "title": "Fantasia Express", "detail": "Augmented and mixed reality for train passengers, Innovate UK First of a Kind with LNER, East Coast Main Line", "slug": "fantasia-express" },
-    { "date": "May 2018", "title": "Catch Me If You Can", "detail": "Augmented reality participatory public installation, Phoenix Arts Centre, Leicester", "slug": null },
-    { "date": "Dec 2017", "title": "Rise of the Data Collectors", "detail": "Four new artworks as part of a group exhibition, Guangzhou, China", "slug": null },
-    { "date": "Oct 2017", "title": "Invisible Arts Network — The Happening", "detail": "Six-month artist residency and public event, Rural Media, Herefordshire", "slug": "invisible-arts-network" },
-    { "date": "Feb 2017", "title": "Sonic Market", "detail": "Permanent public installation, commissioned by Brighton Digital Festival, Brighton", "slug": "sonic-market" },
-    { "date": "Nov 2016", "title": "TILO", "detail": "Permanent installation, Unilever, Port Sunlight", "slug": "tilo-v1" },
-    { "date": "Aug 2016", "title": "Cakenocake", "detail": "Participatory public installation, self-initiated, Liverpool", "slug": "cakenocake" },
-    { "date": "May 2016", "title": "Emofie", "detail": "Participatory public installation, Phoenix Arts Centre, Leicester", "slug": "emofie" },
-    { "date": "Jan 2016", "title": "BIGMOUTH", "detail": "Participatory public installation, Metal, Liverpool Provocations", "slug": "bigmouth" },
-    { "date": "Dec 2015", "title": "Memory Sphere", "detail": "Outdoor installation for the closing NYE party, Escape to Chronos, Kazimier, Liverpool", "slug": null },
-    { "date": "Oct 2015", "title": "Emofie", "detail": "Participatory mobile app for iOS, also works as a gallery installation", "slug": "emofie" },
-    { "date": "May 2015", "title": "Diablo Quintapenhas", "detail": "Large interactive installation, commissioned by Phoenix, Leicester", "slug": null },
-    { "date": "Jul 2014", "title": "Kindred Spirits", "detail": "Large interactive installation, commissioned by Tate Liverpool", "slug": "kindred-spirits" },
-    { "date": "May 2014", "title": "When I Grow Up", "detail": "Interactive installation, commissioned for Sparks children's festival, Phoenix Arts Centre, Leicester", "slug": "when-i-grow-up" },
+    {
+      "date": "2024",
+      "title": "Not the Beatles Tour",
+      "detail": "Location-triggered walking tour, self-initiated, Liverpool",
+      "slug": "not-the-beatles"
+    },
+    {
+      "date": "2023",
+      "title": "Bigheads",
+      "detail": "R&D project, Manchester Innovation Lab, Manchester",
+      "slug": "bigheads"
+    },
+    {
+      "date": "2023",
+      "title": "TILO v2",
+      "detail": "Second-generation hybrid display system, Phoenix Arts Centre, Nottingham",
+      "slug": "tilo-v2"
+    },
+    {
+      "date": "2022",
+      "title": "Homewalk",
+      "detail": "Located walk, Phoenix Arts Centre, Nottingham",
+      "slug": "homewalk"
+    },
+    {
+      "date": "Feb 2019",
+      "title": "Fantasia Express",
+      "detail": "Augmented and mixed reality for train passengers, Innovate UK First of a Kind with LNER, East Coast Main Line",
+      "slug": "fantasia-express"
+    },
+    {
+      "date": "May 2018",
+      "title": "Catch Me If You Can",
+      "detail": "Augmented reality participatory public installation, Phoenix Arts Centre, Leicester",
+      "slug": null
+    },
+    {
+      "date": "Dec 2017",
+      "title": "Rise of the Data Collectors",
+      "detail": "Four new artworks as part of a group exhibition, Guangzhou, China",
+      "slug": null
+    },
+    {
+      "date": "Oct 2017",
+      "title": "Invisible Arts Network - The Happening",
+      "detail": "Six-month artist residency and public event, Rural Media, Herefordshire",
+      "slug": "invisible-arts-network"
+    },
+    {
+      "date": "Feb 2017",
+      "title": "Sonic Market",
+      "detail": "Permanent public installation, commissioned by Brighton Digital Festival, Brighton",
+      "slug": "sonic-market"
+    },
+    {
+      "date": "Nov 2016",
+      "title": "TILO",
+      "detail": "Permanent installation, Unilever, Port Sunlight",
+      "slug": "tilo-v1"
+    },
+    {
+      "date": "Aug 2016",
+      "title": "Cakenocake",
+      "detail": "Participatory public installation, self-initiated, Liverpool",
+      "slug": "cakenocake"
+    },
+    {
+      "date": "May 2016",
+      "title": "Emofie",
+      "detail": "Participatory public installation, Phoenix Arts Centre, Leicester",
+      "slug": "emofie"
+    },
+    {
+      "date": "Jan 2016",
+      "title": "BIGMOUTH",
+      "detail": "Participatory public installation, Metal, Liverpool Provocations",
+      "slug": "bigmouth"
+    },
+    {
+      "date": "Dec 2015",
+      "title": "Memory Sphere",
+      "detail": "Outdoor installation for the closing NYE party, Escape to Chronos, Kazimier, Liverpool",
+      "slug": null
+    },
+    {
+      "date": "Oct 2015",
+      "title": "Emofie",
+      "detail": "Participatory mobile app for iOS, also works as a gallery installation",
+      "slug": "emofie"
+    },
+    {
+      "date": "May 2015",
+      "title": "Diablo Quintapenhas",
+      "detail": "Large interactive installation, commissioned by Phoenix, Leicester",
+      "slug": null
+    },
+    {
+      "date": "Jul 2014",
+      "title": "Kindred Spirits",
+      "detail": "Large interactive installation, commissioned by Tate Liverpool",
+      "slug": "kindred-spirits"
+    },
+    {
+      "date": "2014 · 2023",
+      "title": "When I Grow Up",
+      "detail": "Interactive installation, commissioned for Sparks children's festival, Phoenix Arts Centre, Leicester",
+      "slug": "when-i-grow-up",
+      "sub": [
+        "Sparks children's festival, Phoenix Arts Centre, Leicester - May 2014",
+        "Restaged for the launch of TILO v2, Phoenix, Nottingham - 2023"
+      ]
+    },
     {
       "date": "2013–15",
       "title": "TILO",
       "detail": "Hybrid display system for arts and cultural venues. Exploring how digital public space can have an emotional and personalised dialogue with visitors, leading a collaboration between artists, arts organisations and industry.",
       "slug": "tilo-v1",
       "sub": [
-        "FACT, Liverpool — 2013, permanent",
-        "Phoenix Arts Centre, Leicester — 2014, permanent",
-        "AHRC Creative Economy Showcase, London — Mar 2014",
-        "Unilever, Port Sunlight — Dec 2017, permanent"
+        "FACT, Liverpool - 2013, permanent",
+        "Phoenix Arts Centre, Leicester - 2014, permanent",
+        "AHRC Creative Economy Showcase, London - Mar 2014",
+        "Unilever, Port Sunlight - Dec 2017, permanent"
       ]
     },
     {
@@ -52,9 +143,9 @@
       "detail": "Lead artists as part of a collaboration between four Brazilian and UK artists.",
       "slug": "humble-market",
       "sub": [
-        "Agencia Humble — June 2014, World Cup, Belo Horizonte, Brazil",
-        "Performance event, London 2012 Cultural Olympiad — 9–11 Sept 2012, Preston",
-        "Trade Secrets, FACT summer exhibition — 22 June – 26 Aug 2012, Liverpool"
+        "Agencia Humble - June 2014, World Cup, Belo Horizonte, Brazil",
+        "Performance event, London 2012 Cultural Olympiad - 9–11 Sept 2012, Preston",
+        "Trade Secrets, FACT summer exhibition - 22 June – 26 Aug 2012, Liverpool"
       ]
     },
     {
@@ -63,77 +154,220 @@
       "detail": "Series of interventions, online and location based, culminating in a large-scale interaction at the closing of the NW Cultural Olympiad ceremony.",
       "slug": "handprint-2012",
       "sub": [
-        "Opening ceremony, NW Cultural Olympiad — Mar 2012, Preston",
-        "Looping the Loop, MediaCity — May 2012, Salford",
-        "Trafford Centre main screen — June 2012",
-        "Main installation, large-scale interactive projection on bridge, closing ceremony — Sept 2012"
+        "Opening ceremony, NW Cultural Olympiad - Mar 2012, Preston",
+        "Looping the Loop, MediaCity - May 2012, Salford",
+        "Trafford Centre main screen - June 2012",
+        "Main installation, large-scale interactive projection on bridge, closing ceremony - Sept 2012"
       ]
     },
-    { "date": "May 2012", "title": "Wishing Well", "detail": "Permanent public commission, interactive installation in a courtyard garden at a new-build health centre, Mere Lane, Liverpool", "slug": "wishing-well" },
-    { "date": "Jan 2012", "title": "26:14:17", "detail": "Permanent public commission, interactive installation in a waiting room at a new-build health centre, Townsend Lane, Liverpool", "slug": "townsend-lane" },
+    {
+      "date": "May 2012",
+      "title": "Wishing Well",
+      "detail": "Permanent public commission, interactive installation in a courtyard garden at a new-build health centre, Mere Lane, Liverpool",
+      "slug": "wishing-well"
+    },
+    {
+      "date": "Jan 2012",
+      "title": "26:14:17",
+      "detail": "Permanent public commission, interactive installation in a waiting room at a new-build health centre, Townsend Lane, Liverpool",
+      "slug": "townsend-lane"
+    },
     {
       "date": "2010–12",
       "title": "MeYouAndUs",
       "detail": "Series of interactive artworks, adaptable for different contexts.",
       "slug": "meyouandus-series",
       "sub": [
-        "AHRC Digital Transformations Moot, London — Nov 2012",
-        "Robots + Avatars, Europe House, London — Sept 2012",
-        "Robots and Avatars, European touring exhibition, FACT, Liverpool — Mar 2012",
-        "Centro Popular de Conspiração Gargarullo, theatre event, Brazil — Mar 2012",
-        "Carnival, public installation, Miguel Pereira, Brazil — Feb 2012",
-        "Believe event, Salford University, MediaCity — Nov 2011",
-        "Digital Media Arts Lab, MediaCity, Salford — Oct 2011",
-        "Public installation, FACT, Liverpool — June–Sept 2011",
-        "Solo show, Hub Gallery, Manchester — Feb 2011",
-        "Commercial Hotel, Chester — June 2010"
+        "AHRC Digital Transformations Moot, London - Nov 2012",
+        "Robots + Avatars, Europe House, London - Sept 2012",
+        "Robots and Avatars, European touring exhibition, FACT, Liverpool - Mar 2012",
+        "Centro Popular de Conspiração Gargarullo, theatre event, Brazil - Mar 2012",
+        "Carnival, public installation, Miguel Pereira, Brazil - Feb 2012",
+        "Believe event, Salford University, MediaCity - Nov 2011",
+        "Digital Media Arts Lab, MediaCity, Salford - Oct 2011",
+        "Public installation, FACT, Liverpool - June–Sept 2011",
+        "Solo show, Hub Gallery, Manchester - Feb 2011",
+        "Commercial Hotel, Chester - June 2010"
       ]
     },
-    { "date": "Nov 2011", "title": "Lowry to Life", "detail": "Telematic public interactive artwork commissioned to celebrate the University of Salford's move to MediaCityUK. Two linked installations reflecting different perspectives on L.S. Lowry's painting of Piccadilly Gardens (1954).", "slug": "lowry-to-life" },
-    { "date": "Feb 2011", "title": "Hub Gallery", "detail": "Solo exhibition and residency, Salford", "slug": null },
-    { "date": "2010–11", "title": "BBC Big Screens", "detail": "Interactive mass participation artwork, various sites — Manchester, Leicester, Edinburgh", "slug": "meyouandus-series" },
-    { "date": "Dec 2008", "title": "Handprint", "detail": "Large-scale public interactive projection on Manchester's second tallest building, 11–14 December", "slug": "handprint-2008" }
+    {
+      "date": "Nov 2011",
+      "title": "Lowry to Life",
+      "detail": "Telematic public interactive artwork commissioned to celebrate the University of Salford's move to MediaCityUK. Two linked installations reflecting different perspectives on L.S. Lowry's painting of Piccadilly Gardens (1954).",
+      "slug": "lowry-to-life"
+    },
+    {
+      "date": "Feb 2011",
+      "title": "Hub Gallery",
+      "detail": "Solo exhibition and residency, Salford",
+      "slug": null
+    },
+    {
+      "date": "2010–11",
+      "title": "BBC Big Screens",
+      "detail": "Interactive mass participation artwork, various sites - Manchester, Leicester, Edinburgh",
+      "slug": "meyouandus-series"
+    },
+    {
+      "date": "Dec 2008",
+      "title": "Handprint",
+      "detail": "Large-scale public interactive projection on Manchester's second tallest building, 11–14 December",
+      "slug": "handprint-2008"
+    }
   ],
-
   "awards": [
-    { "date": "2018", "detail": "Innovate UK, First of a Kind — Future Trains Today" },
-    { "date": "2016", "detail": "Innovate UK, Urban Spaces Innovation — finalists for Silent Majority" },
-    { "date": "2014", "detail": "The Humble Market: Trade Secrets, selected by the Brazilian Ministry of Culture for the national arts programme in the host cities for the World Cup" },
-    { "date": "2014", "detail": "Psychosocial Research Unit, UCLan — associate since 2014" },
-    { "date": "2013–14", "detail": "Digital R&D Fund for the Arts, for TILO" },
-    { "date": "2012", "detail": "London 2012 Cultural Olympiad, Festival status — Handprint 2012" },
-    { "date": "2012", "detail": "London 2012 Cultural Olympiad, Festival status — The Humble Market" },
-    { "date": "2012", "detail": "Selected for Robots and Avatars, European touring exhibition" },
-    { "date": "2011", "detail": "FACT Associates, since 2011" },
-    { "date": "2008", "detail": "Arts Council England (GFA)" },
-    { "date": "", "detail": "BFI, Film Hub North West" },
-    { "date": "", "detail": "a-n, Rhizome, Public Art Lab" }
+    {
+      "date": "2018",
+      "detail": "Innovate UK, First of a Kind - Future Trains Today"
+    },
+    {
+      "date": "2016",
+      "detail": "Innovate UK, Urban Spaces Innovation - finalists for Silent Majority"
+    },
+    {
+      "date": "2014",
+      "detail": "The Humble Market: Trade Secrets, selected by the Brazilian Ministry of Culture for the national arts programme in the host cities for the World Cup"
+    },
+    {
+      "date": "2014",
+      "detail": "Psychosocial Research Unit, UCLan - associate since 2014"
+    },
+    {
+      "date": "2013–14",
+      "detail": "Digital R&D Fund for the Arts, for TILO"
+    },
+    {
+      "date": "2012",
+      "detail": "London 2012 Cultural Olympiad, Festival status - Handprint 2012"
+    },
+    {
+      "date": "2012",
+      "detail": "London 2012 Cultural Olympiad, Festival status - The Humble Market"
+    },
+    {
+      "date": "2012",
+      "detail": "Selected for Robots and Avatars, European touring exhibition"
+    },
+    {
+      "date": "2011",
+      "detail": "FACT Associates, since 2011"
+    },
+    {
+      "date": "2008",
+      "detail": "Arts Council England (GFA)"
+    },
+    {
+      "date": "",
+      "detail": "BFI, Film Hub North West"
+    },
+    {
+      "date": "",
+      "detail": "a-n, Rhizome, Public Art Lab"
+    }
   ],
-
   "press": [
-    { "date": "2016", "title": "Review: Liverpool Provocations — a series of artistic interruptions", "publication": "Corridor8", "url": "http://www.corridor8.co.uk/online/review-liverpool-provocations-a-series-of-artistic-interruptions-liverpool/" },
-    { "date": "2014", "title": "Digital R&D: screens, footprints and buildings with soul", "publication": "a-n, The Artists Information Company", "url": "https://www.a-n.co.uk/news/digital-rd-2-screens-footprints-and-buildings-with-soul" },
-    { "date": "2014", "title": "The all-seeing creator", "publication": "Arts Digital R&D", "url": "http://artsdigitalrnd.org.uk/features/the-all-seeing-creator/" },
-    { "date": "2012", "title": "Review of The Humble Market at FACT", "publication": "Feeling Listless", "url": "http://feelinglistless.blogspot.co.uk/2012/06/fact-liverpools-new-show-humble-market.html" },
-    { "date": "2012", "title": "Digital wishing wells on Mere Lane", "publication": "tenantspin", "url": "http://www.tenantspin.org/2012/07/03/digital-wishing-wells-on-mere-lane/" },
-    { "date": "2011", "title": "Lowry to Life", "publication": "The Guardian", "url": "", "note": "URL on the old site is malformed and needs re-finding" },
-    { "date": "2011", "title": "Interview and article: Lowry to Life", "publication": "BBC News", "url": "http://www.bbc.co.uk/news/uk-england-manchester-15643875" },
-    { "date": "2008", "title": "Interview and article: Handprint", "publication": "BBC Manchester", "url": "http://www.bbc.co.uk/manchester/content/articles/2008/12/10/121208_handprint_feature.shtml" }
+    {
+      "date": "2016",
+      "title": "Review: Liverpool Provocations - a series of artistic interruptions",
+      "publication": "Corridor8",
+      "url": "http://www.corridor8.co.uk/online/review-liverpool-provocations-a-series-of-artistic-interruptions-liverpool/"
+    },
+    {
+      "date": "2014",
+      "title": "Digital R&D: screens, footprints and buildings with soul",
+      "publication": "a-n, The Artists Information Company",
+      "url": "https://www.a-n.co.uk/news/digital-rd-2-screens-footprints-and-buildings-with-soul"
+    },
+    {
+      "date": "2014",
+      "title": "The all-seeing creator",
+      "publication": "Arts Digital R&D",
+      "url": "http://artsdigitalrnd.org.uk/features/the-all-seeing-creator/"
+    },
+    {
+      "date": "2012",
+      "title": "Review of The Humble Market at FACT",
+      "publication": "Feeling Listless",
+      "url": "http://feelinglistless.blogspot.co.uk/2012/06/fact-liverpools-new-show-humble-market.html"
+    },
+    {
+      "date": "2012",
+      "title": "Digital wishing wells on Mere Lane",
+      "publication": "tenantspin",
+      "url": "http://www.tenantspin.org/2012/07/03/digital-wishing-wells-on-mere-lane/"
+    },
+    {
+      "date": "2011",
+      "title": "Lowry to Life",
+      "publication": "The Guardian",
+      "url": "",
+      "note": "URL on the old site is malformed and needs re-finding"
+    },
+    {
+      "date": "2011",
+      "title": "Interview and article: Lowry to Life",
+      "publication": "BBC News",
+      "url": "http://www.bbc.co.uk/news/uk-england-manchester-15643875"
+    },
+    {
+      "date": "2008",
+      "title": "Interview and article: Handprint",
+      "publication": "BBC Manchester",
+      "url": "http://www.bbc.co.uk/manchester/content/articles/2008/12/10/121208_handprint_feature.shtml"
+    }
   ],
-
   "residencies": [
-    { "date": "2015", "detail": "Nesta, Digital Art in Public Spaces, presentation, Liverpool" },
-    { "date": "2015", "detail": "Metal Edge Hill, one-week residency, Liverpool" },
-    { "date": "2014", "detail": "Economies of Experience conference, London" },
-    { "date": "2014", "detail": "AHRC Creative Showcase conference, London" },
-    { "date": "2014", "detail": "Creative Showcase, Cornerhouse, Manchester" },
-    { "date": "2014", "detail": "Seminar, University of Central Lancashire" },
-    { "date": "2012", "detail": "Liverpool and Sefton Health Partnership — community workshops and public engagement for the Decade of Health and Wellbeing, alongside two permanent commissions" },
-    { "date": "2012", "detail": "La Société des Arts Technologiques, Montreal — one-week residency and workshop" },
-    { "date": "2012", "detail": "Gargarullo theatre, Brazil — five-week residency and workshop" },
-    { "date": "2011", "detail": "Hub, Salford — popup gallery, three-week residency leading to a solo exhibition" },
-    { "date": "2011", "detail": "FACT, Liverpool — artist in residence" },
-    { "date": "2011", "detail": "Visiting lecturer, University of Salford" },
-    { "date": "2009", "detail": "Visiting lecturer, University of Salford" }
+    {
+      "date": "2015",
+      "detail": "Nesta, Digital Art in Public Spaces, presentation, Liverpool"
+    },
+    {
+      "date": "2015",
+      "detail": "Metal Edge Hill, one-week residency, Liverpool"
+    },
+    {
+      "date": "2014",
+      "detail": "Economies of Experience conference, London"
+    },
+    {
+      "date": "2014",
+      "detail": "AHRC Creative Showcase conference, London"
+    },
+    {
+      "date": "2014",
+      "detail": "Creative Showcase, Cornerhouse, Manchester"
+    },
+    {
+      "date": "2014",
+      "detail": "Seminar, University of Central Lancashire"
+    },
+    {
+      "date": "2012",
+      "detail": "Liverpool and Sefton Health Partnership - community workshops and public engagement for the Decade of Health and Wellbeing, alongside two permanent commissions"
+    },
+    {
+      "date": "2012",
+      "detail": "La Société des Arts Technologiques, Montreal - one-week residency and workshop"
+    },
+    {
+      "date": "2012",
+      "detail": "Gargarullo theatre, Brazil - five-week residency and workshop"
+    },
+    {
+      "date": "2011",
+      "detail": "Hub, Salford - popup gallery, three-week residency leading to a solo exhibition"
+    },
+    {
+      "date": "2011",
+      "detail": "FACT, Liverpool - artist in residence"
+    },
+    {
+      "date": "2011",
+      "detail": "Visiting lecturer, University of Salford"
+    },
+    {
+      "date": "2009",
+      "detail": "Visiting lecturer, University of Salford"
+    }
   ]
 }

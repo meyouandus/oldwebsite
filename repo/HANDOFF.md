@@ -1,74 +1,74 @@
-# Content handoff
+# Content handoff — export of 11 Aug 2026
 
-Reply to `DESIGN-STATE.md`. Design decisions are yours; this file and everything in
-`content/` are content only. Anywhere my earlier documents strayed into colour, type, motion
-or treatment, that's been removed rather than argued with — `ASSET-SPEC.md` is now a data and
-image contract and nothing more.
+Reply to `DESIGN-STATE.md`. Design decisions are yours; everything in `content/` and `img/` is
+content only. `ASSET-SPEC.md` is a data and image contract and nothing more — where my earlier
+documents strayed into colour, type or treatment, that's been removed rather than argued with.
 
-## Your four asks — done
+Read `content/ASSET-SPEC.md` for the full contract. This file is what changed.
 
-**1. `projects.json` at 20 entries.** Ready. `section`, `span`, `wide`, `video`, `credits` all
-populated. Rows total 12 within each section: section 1 is 5+7, 8+4, 4+4+4, 5+4+3; section 2
-is 7+5, 8+4, 8+4, 3+3+3+3. Four projects carry `wide` (`tilo-v2`, `fantasia-express`,
-`kindred-spirits`, `invisible-arts-network`). Two have an empty `cover` (`madheads`,
-`not-the-beatles`). 13 of 20 carry a `video`.
+## Since the last export
 
-**2. `imageCredit`.** Added to every project entry, empty string where not required. Currently
-set on `handprint-2012` only — Simon Kirwan. Also on `site.images.hero`, same photographer.
+**Video is now populated and verified.** 18 of 20 projects carry a film, each URL checked
+against Vimeo's oEmbed endpoint rather than taken on trust. YouTube is gone entirely.
 
-**3. A `site` block.** New file, `content/site.json`, rather than a block inside another file,
-so it can be fetched independently:
+**Every URL in this export currently has no privacy hash** — they're all the clean
+`https://vimeo.com/<id>` form. The parser must still handle `vimeo.com/<id>/<hash>`, because
+any film switched to Unlisted later will gain one. See the Video section of the spec.
 
-```
-tagline                    the hero subline, written to hold one line
-images.hero / images.bleed  src, imageCredit, alt — both 2560x1440, real files, not stand-ins
-sections[]                  id, theme, heading, blurb for the two sets
-```
+**`images` no longer has a cap.** It was 0–3; it's now open-ended, because several projects
+have more good photography than three slots allowed. Per your layout the first image sets at
+21:9 full width and the rest at 3:2 half width, so an odd total tiles evenly and an even one
+leaves a half-width orphan. I'll supply odd totals where the material allows, but the front
+end should cope either way.
 
-I've included the section headings and blurbs there too. They're copy, and nothing else in
-the build is hard-coded, so they may as well match. Ignore that part if you'd rather keep them
-in the component.
+**One project renamed.** `madheads` → `bigheads`, title **Bigheads** — a trademark-driven
+change to the work's actual name. Slug, title and all cross-references updated. It had no
+image folder yet, so nothing on disk moved.
 
-`img/site/hero.jpg` and `img/site/bleed.jpg` both exist and are in the repo — swap off
-`lowry-to-life.jpg` and `brazil.jpg` when convenient.
+**Two entries changed shape.** `when-i-grow-up` is now `"2014 · 2023"` — made for Sparks in
+2014, restaged in 2023 on a better screen, and the film attached is from the restaging. Its
+About entry carries both stagings as a sub-list.
 
-**4. `about.json`.** Unchanged.
+**New files:** `content/site.json` (tagline, the two site images with credits and alt text,
+section headings and blurbs), plus `imageCredit` on every project.
 
-## Contact
+## State of the content
 
-Keep both nav items, and read the same `contact` block in `about.json` for whichever view
-shows it. There's one email address and a base — not enough to justify a second file, and if
-it ever changes it should change once.
+| | |
+| --- | --- |
+| Projects | 20, ten per section, rows total 12 in both |
+| Covers | 18 of 20. `bigheads` and `not-the-beatles` are empty strings |
+| Wide crops | 4, on the span-7/8 cells. `not-the-beatles` still needs one |
+| Video | 18 of 20 |
+| Site images | `hero.jpg` and `bleed.jpg`, both real, both 2560×1440 |
+| About | 28 catalogue entries, 12 awards, 8 press, 13 residencies |
 
-Whether Contact is its own takeover or a block at the foot of About is a design call. The
-content works either way. Worth knowing that About is long — 28 catalogue entries, 12 awards,
-8 press, 13 residencies — so an email at the bottom of it is a long scroll from the nav.
+Three projects without film: `tilo-v2` and `wishing-well` are pending, `sonic-market` has
+none and never will — see below.
 
-## Your two confirmations
+## What's still coming
 
-Both are open questions for Alastair, not things I can settle:
+- **Images for `tilo-v2` and `wishing-well`**, and a film for `tilo-v2`
+- **`bigheads` and `not-the-beatles`** have films now, so covers can be pulled from them
+- **A file rename pass.** Filenames will become self-describing —
+  `<slug>-cover.jpg` rather than `<slug>/cover.jpg`. Paths in the JSON will change with them.
+  It hasn't happened yet; when it does it's a single co-ordinated change
 
-- **`lowry-to-life`** — the image is `Al_colour_27.jpg`, which is what the old site's Lowry to
-  Life page used. It reads as a children's drawing rather than anything Lowry-ish, so either
-  the old site was wrong or I'm misreading the work. Unconfirmed.
-- **`tilo-v2`** — cover and gallery are frame grabs from
-  `ART/tilo___digital_&_interactive_art_platform.mp4`. The film is branded "digital &
-  interactive art platform", which reads later than the 2013–15 v1 material, but I can't
-  confirm it's the 2023 Phoenix Nottingham work. Unconfirmed.
+## Worth knowing
 
-Both are flagged in `ASSET-MANIFEST.md` under stand-ins, along with five others — `sonic-market`
-(no photography of it exists anywhere), `bigmouth` (640×360 upscaled), `when-i-grow-up`,
-`homewalk`, `fantasia-express`.
+**`sonic-market` has no photograph and no film, and none exists.** A permanent public
+installation for Brighton Digital Festival, and the only surviving asset is a graphic panel.
+It's the one entry in the twenty with no documentation of the work itself.
 
-## Two consequences of your changes, for the record
+**Seven images are stand-ins** — listed in `ASSET-MANIFEST.md`. Worth reading before judging
+how any given cell looks.
 
-- **Footer has no email.** So `contact.email` now surfaces only in the Contact view. Noted in
-  the spec; no content change needed.
-- **The hero subline is new copy.** "Breaking interfaces and amplifying place" came from the
-  design, not from me. It's now `site.tagline` and I've left the wording exactly as built.
+**Simon Kirwan** shot `handprint-2012/cover.jpg` and `site/hero.jpg`. Carried as `imageCredit`
+on the project and on `images.hero` in `site.json`, and still needs somewhere to display.
 
-## Not built yet, so still worth flagging
+## Still open on your side
 
-`video` and `credits` are populated on the entries but not rendered. Section 2 is a duplicate
-of section 1. None of that blocks anything on the content side — the data is there when you
-get to it.
+`video` and `credits` are populated but not rendered. `imageCredit` has nowhere to go.
+Section 2 is a duplicate of section 1. About and Contact takeovers are empty and ready for
+`about.json`. `#/about` is still React state rather than a route, so About is invisible to
+search.

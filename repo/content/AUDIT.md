@@ -66,7 +66,7 @@ that copy and currently has nowhere to go (§5).
 
 ## 3. New entries with no old-site source (4)
 
-`not-the-beatles` (2024), `madheads` (2023), `tilo-v2` (2023), `homewalk` (2022). The old
+`not-the-beatles` (2024), `bigheads` (2023), `tilo-v2` (2023), `homewalk` (2022). The old
 site stops at Fantasia Express, 2019 — so nothing can be migrated for these. Everything has
 to be produced fresh: **no cover, no gallery, and no long-form text exists anywhere.**
 
@@ -74,7 +74,7 @@ Candidate footage already in your folders:
 
 - `homewalk` → `ART/homewalk.mp4`
 - `tilo-v2` → `ART/tilo___digital_&_interactive_art_platform (1080p).mp4`, `ART/phoenix-update.mp4`, `maybe/tilo.mov`
-- `madheads` → nothing found
+- `bigheads` → nothing found
 - `not-the-beatles` → nothing found
 
 ---
@@ -152,7 +152,7 @@ board, not just for the empty slots.
 | `img/site/hero.jpg` 2560×1440 | **Missing.** Nearest is `lowry-to-life.jpg` at 1500×998 |
 | `img/site/bleed.jpg` 2560×1440 | **Missing.** `brazil.jpg` is 1500×844 |
 | `img/projects/<slug>/` structure | **Doesn't exist.** All 30 files are flat in `img/` |
-| `cover.jpg` × 12 | 9 present as legacy files, 3 empty (`not-the-beatles`, `madheads`, `homewalk`); `tilo-v2` has one but it's a wrong-generation image |
+| `cover.jpg` × 12 | 9 present as legacy files, 3 empty (`not-the-beatles`, `bigheads`, `homewalk`); `tilo-v2` has one but it's a wrong-generation image |
 | `wide.jpg` for span 7–8 | **None exist.** Needed for `invisible-arts-network` (8), `kindred-spirits` (8), `not-the-beatles` (7) |
 
 Aspect-ratio problems in the current set:

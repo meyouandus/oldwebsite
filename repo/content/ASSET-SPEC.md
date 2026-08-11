@@ -25,13 +25,14 @@ img/
       wide.jpg            2400 x  860 (2.8:1) — OPTIONAL. Used instead of cover.jpg when
                                                 present, for projects in a wide cell
                                                 (span 7 or 8)
-      01.jpg 02.jpg 03.jpg  2400px on the long edge, any ratio — the project gallery
+      01.jpg 02.jpg 03.jpg…  2400px on the long edge, any ratio — the project gallery,
+                            numbered in display order, no fixed limit
 ```
 
 `<slug>` is lowercase, hyphenated, and must match `slug` in the JSON. Current slugs, by
 section:
 
-- **Section 1, `interface`:** `madheads`, `tilo-v2`, `fantasia-express`,
+- **Section 1, `interface`:** `bigheads`, `tilo-v2`, `fantasia-express`,
   `bigmouth`, `cakenocake`, `emofie`, `when-i-grow-up`, `tilo-v1`, `humble-market`,
   `meyouandus-series`
 - **Section 2, `place`:** `not-the-beatles`, `homewalk`, `kindred-spirits`,
@@ -94,7 +95,7 @@ An array of 20. Array order is wall order, within `section` order.
     "year": "2024",
     "place": "Liverpool",
     "commissioner": "Self-initiated",
-    "blurb": "One or two sentences, plain and factual, 30–45 words. It sets large, so it should read as a statement, not a press release.",
+    "blurb": "A short paragraph, plain and factual, 45-90 words. It sets large, so it should read as a statement. One or two facts, one detail with texture, no marketing adjectives.",
     "theme": "place",
     "alsoTheme": "interface",
     "section": 2,
@@ -118,19 +119,44 @@ An array of 20. Array order is wall order, within `section` order.
 | `year` | A string, so ranges work: `"2012–14"`. |
 | `place` | City or venue. Pairs with `year` as the project's meta line. |
 | `commissioner` | Funder or commissioning body; `"Self-initiated"` when there isn't one. |
-| `blurb` | 30–45 words, plain and factual, no marketing adjectives. |
+| `blurb` | 45-90 words, plain and factual. All site copy follows `language.md` in the project root. |
 | `theme` | `"interface"` or `"place"`. Must agree with `section`. |
 | `alsoTheme` | Optional, the opposite value. Only for work that genuinely does both. |
 | `section` | `1` or `2`. See the two sections above. |
 | `span` | 3–8. Rows must total 12, and each section must total a multiple of 12. |
 | `cover` | The project's wall image. Empty string means no image exists yet. |
 | `wide` | Panoramic 2.8:1 crop, supplied for span-7/8 projects. Takes precedence over `cover` on the wall. |
-| `video` | Vimeo or YouTube URL. Empty string when there isn't one. Present on 13 of 20. |
+| `video` | Vimeo URL, always in full `https://vimeo.com/<id>/<hash>` form. Empty string when there isn't one. See below. |
 | `credits` | Collaborators line. Empty string when there isn't one. |
 | `imageCredit` | Photographer credit for the project's images. Empty string when not required. Currently only `handprint-2012` (Simon Kirwan). |
-| `images` | 0–3 gallery files. Per `DESIGN-STATE.md` the first sets at 21:9 and the rest at 3:2, so supply accordingly. Empty array means none exist. |
+| `images` | Gallery files, **no fixed maximum**. Per `DESIGN-STATE.md` the first sets at 21:9 full width and the rest at 3:2 half width, so an odd count after the first leaves a half-width orphan — supply 1, 3, 5, 7… total where possible. Empty array means none exist. |
 
 Paths are relative to the project root (the same folder as `MeYouAndUs.dc.html`).
+
+### Video
+
+All films are hosted on Vimeo. Privacy is set per film so that the public Vimeo channel stays
+curated rather than mirroring everything the site embeds. Three settings are in use:
+
+| Setting | On the channel | Vimeo page | Embeds | URL form |
+| --- | --- | --- | --- | --- |
+| Public | Yes | Yes | Yes | `vimeo.com/<id>` |
+| Hide from Vimeo ("embed only") | No | **No** | Yes | `vimeo.com/<id>` — no hash |
+| Unlisted | No | Yes, shareable | Yes | `vimeo.com/<id>/<hash>` |
+
+`video` stores the share URL exactly as Vimeo gives it. Embed as
+`https://player.vimeo.com/video/<id>`, adding `?h=<hash>` only when the URL has a second
+segment. The front end must parse both forms and must not assume the last path segment is the
+ID.
+
+**Hide from Vimeo is the preferred setting for films whose only job is to play on this site** —
+it achieves the curation goal with no privacy hash to carry, so the URL stays a clean
+`vimeo.com/<id>`. Its one cost is that there's no vimeo.com page to send anyone; the film
+exists only as an embed. Use Unlisted instead where a sendable link is wanted.
+
+None of these is a security control — an embedded film is visible to anyone who loads the page.
+Anything genuinely not for public view should be Private on Vimeo and absent from
+`projects.json`.
 
 ## content/about.json
 
@@ -184,7 +210,7 @@ sizes, whatever the old site happened to have. When new assets are produced unde
 `img/projects/<slug>/`, update the `cover` / `wide` / `images` paths in the JSON to match and
 the old files can be deleted.
 
-Seven projects have no cover and render placeholders: `madheads`, `tilo-v2`, `bigmouth`,
+Seven projects have no cover and render placeholders: `bigheads`, `tilo-v2`, `bigmouth`,
 `cakenocake`, `not-the-beatles`, `homewalk`, `handprint-2008`. The first two and the last
 three need new photography; `bigmouth` and `cakenocake` have stills on the old site that
 haven't been pulled down yet.

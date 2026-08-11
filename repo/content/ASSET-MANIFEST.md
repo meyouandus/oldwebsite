@@ -38,7 +38,7 @@ These came off 2400–5000px originals and are genuinely the right image for the
 
 ## Empty — nothing exists
 
-`madheads` and `not-the-beatles` have no imagery in any folder. Their `cover` is an empty
+`bigheads` and `not-the-beatles` have no imagery in any folder. Their `cover` is an empty
 string, so they render as drop-slots until something is shot.
 
 `not-the-beatles` sits in a span-7 cell and will want a `wide.jpg` too.
@@ -49,6 +49,18 @@ string, so they render as drop-slots until something is shot.
 - The four `ian-web*.jpg` files — all logo lockups, no photography
 - `Tilo_logo_WHI_BG.jpg`, `myu-logo*.png` — logos
 - `lancaster-photoemoticon` kept, but as an Emofie gallery image, not the Lancaster seminar
+
+## Video
+
+Live intake in progress — see `VIDEO-INTAKE.csv` for the running state. Every URL is verified
+against Vimeo's oEmbed endpoint as it arrives.
+
+All URLs collected so far carry **no privacy hash**, so they're all the clean
+`https://vimeo.com/<id>` form. The front end must still handle `vimeo.com/<id>/<hash>` in case
+any film ends up Unlisted — see `ASSET-SPEC.md`.
+
+`humble-market` is still on YouTube (`youtu.be/ZL3KvwN7eJk`); a Vimeo trailer exists at
+`1217351938` and is awaiting confirmation.
 
 ## Attribution
 
