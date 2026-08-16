@@ -1,94 +1,172 @@
-# Content handoff — export of 11 Aug 2026
+# Content handoff - export of 13 Aug 2026
 
-Reply to `DESIGN-STATE.md`. Design decisions are yours; everything in `content/` and `img/` is
-content only. `ASSET-SPEC.md` is a data and image contract and nothing more — where my earlier
-documents strayed into colour, type or treatment, that's been removed rather than argued with.
+Reply to `HANDOVER.md` of 13 Aug. Supersedes the handoff of 11 Aug.
 
-Read `content/ASSET-SPEC.md` for the full contract. This file is what changed.
+This handoff has a **Text changes** section, and every one from here will. `HANDOVER.md`
+reported the close control becoming an X and the film control becoming a triangle as visual
+notes, and neither read as what it was, which is a word leaving the page. One of the two words
+did not survive the move.
 
-## Since the last export
+The rules both sides now work to are in `content/CONTENT-CONTRACT.md`. Short version. Content
+owns every word, including the ones nobody sees. Design owns every pixel. The template holds no
+strings.
 
-**Filenames are self-describing now.** `img/projects/tilo-v1/tilo-v1-cover.jpg` rather than
-`.../cover.jpg`, and the site images are `myu-hero.jpg` and `myu-bleed.jpg`. A file still
-identifies itself once it's been downloaded, emailed or dropped into a deck. All paths in the
-JSON changed with them.
+## Text changes
 
-**New field: `poster`.** A self-hosted still, 2400 x 1350, for the film. Show it immediately
-with a play control over it and inject the Vimeo iframe only on click. Vimeo's own thumbnail
-sits inside the iframe, so on a cold load it arrives a second or two late and the visitor
-looks at an empty rectangle. Doing it this way also keeps the player script and its cookies
-off the page until someone asks for the film. **Empty string means fall back to `cover`.**
-Seven projects have one cut from the film; the rest fall back.
+**Added.**
 
-**All copy follows `language.md`**, now in the repo root. No em dashes anywhere in the three
-JSON files. Blurbs run 52-88 words, up from the 30-45 the modal was styled around, so the
-display size will need a look.
+- `posterAlt` on the seven projects that carry a poster frame. Real alt text, written from
+  looking at each still. Needs one template change to appear, below.
+- `content/ui.json`. The 23 chrome strings that were living in the template, lifted out and put
+  back through `language.md`. Includes two strings that do not exist on the site at all, a page
+  title and a meta description, both marked DRAFT and needing client sign-off.
 
-**Two placeholder images.** `bigheads-cover.jpg` and the two `not-the-beatles` files are
-obvious grey placeholders with the filename printed on them. Alastair replaces the files
-directly, no JSON change needed.
+**Changed.** Both section blurbs in `site.json`, rewritten by Alastair on 15 Aug.
 
-**Video is now populated and verified.** 18 of 20 projects carry a film, each URL checked
-against Vimeo's oEmbed endpoint rather than taken on trust. YouTube is gone entirely.
+Breaking interfaces, 27 words to 41.
 
-**Every URL in this export currently has no privacy hash** — they're all the clean
-`https://vimeo.com/<id>` form. The parser must still handle `vimeo.com/<id>/<hash>`, because
-any film switched to Unlisted later will gain one. See the Video section of the spec.
+> Old: We take the technology people use without thinking - screens, sensors, phones, ticket
+> gates - and bend it into something that makes strangers talk to each other.
+>
+> New: We have been working with participatory technology for 18 years. What was niche then is
+> in everyone's pocket now. Our new direction applies the same artistic sensibility to the
+> devices themselves, breaking their interface so they serve real experiences and connections.
 
-**`images` no longer has a cap.** It was 0–3; it's now open-ended, because several projects
-have more good photography than three slots allowed. Per your layout the first image sets at
-21:9 full width and the rest at 3:2 half width, so an odd total tiles evenly and an even one
-leaves a half-width orphan. I'll supply odd totals where the material allows, but the front
-end should cope either way.
+Amplifying place, 20 words to 43.
 
-**One project renamed.** `madheads` → `bigheads`, title **Bigheads** — a trademark-driven
-change to the work's actual name. Slug, title and all cross-references updated. It had no
-image folder yet, so nothing on disk moved.
+> Old: Work made for one specific street, market, waiting room or station - built with the
+> people who already use it.
+>
+> New: Some artworks respond to their local context. Others create one. Both are built around
+> the people passing through, and often the work does not exist without them. We rarely expect
+> people to come to us. We disrupt the routine they are already in.
 
-**Two entries changed shape.** `when-i-grow-up` is now `"2014 · 2023"` — made for Sparks in
-2014, restaged in 2023 on a better screen, and the film attached is from the restaging. Its
-About entry carries both stagings as a sub-list.
+Both blocks were 27 and 20 words. They are now 41 and 43, so they sit level, but each is
+roughly double what the modal was styled around. Worth a look at the display size.
 
-**New files:** `content/site.json` (tagline, the two site images with credits and alt text,
-section headings and blurbs), plus `imageCredit` on every project.
+**The template will not show either of these.** The section blurbs are two of the five strings
+hard-coded in `MeYouAndUs.dc.html`, lines 55 and 92, so the new wording has to be typed in by
+hand until the `site.json` fix lands.
+
+**All 20 project blurbs**, rewritten by Alastair on 15 Aug and edited lightly. 1,415 words to
+1,575, none over the new 100-word ceiling. Several correct facts the old copy had wrong.
+Homewalk is about the first post-COVID exhibition at Phoenix rather than about migration.
+Bigheads scans your head into a series of mini games. BIGMOUTH is a megaphone with its
+microphone replaced by a camera. The full set is in `content/BLURBS-DRAFT.md` with the previous
+text under each one.
+
+**One title changed.** `townsend-lane` is now titled `26:14:17 (WAITING)` rather than
+`26:14:17`, in `projects.json` and in the About catalogue entry in `about.json` so the two
+match. The title drives the grid label, the modal heading and the current image alt text, so
+all three follow. The Wishing Well blurb still refers to it as `26:14:17` in prose, which reads
+better mid-sentence.
+
+**Two corrections to project data.** `tilo-v2` and `homewalk` both carried
+`"place": "Nottingham"`. Phoenix is in Leicester and both projects were made with Phoenix, so
+both now read Leicester. Nothing else in `about.json` referenced Nottingham.
+
+`projects.json` also gained `posterAlt` and nothing else in it moved.
+
+**Removed.** Nothing.
+
+**Requested of design.** Five strings in the template need correcting and one needs writing.
+Listed under "What the template needs" below.
+
+## New files in content/
+
+| File | What it is |
+| --- | --- |
+| `CONTENT-CONTRACT.md` | The ownership boundary, the typography exception, the handover rule |
+| `ui.json` | Interface chrome. Labels, control names, section headings, empty states, page metadata |
+| `UI-STRINGS.md` | The register. Every string on the page, where it lives, what it says |
+| `check-strings.py` | Scans the template and reports any string that did not come from JSON |
+
+Run the checker before sending anything over.
+
+```
+python3 content/check-strings.py MeYouAndUs.dc.html
+```
+
+Current result is twenty-nine literal strings, three display-optional strings allowed by the
+contract, and one control with no accessible name. A clean run means the boundary held.
+
+## What the template needs
+
+Six changes. The first is the only one that stops the site working for somebody.
+
+**1. The play button has no accessible name.** Line 234. No `aria-label`, no text, and the only
+readable thing inside it is the poster image whose `alt` is the project title. A screen reader
+announces the control as "Bigmouth, button". The film is undiscoverable without sight.
+
+```html
+<button onClick="{{ playFilm }}" aria-label="Play film" ...>
+```
+
+**2. Read `posterAlt`.** Line 236 currently sets `alt="{{ workTitle }}"` on the poster image.
+It should read the new field. Seven projects have one, and the fallback where a project has no
+poster stays as it is for now.
+
+**3. Five em dashes.** Lines 55, 92, 124, 190 and 262. `language.md` bans them. Lines 55 and 92
+are copy that is correct in `site.json` and was retyped into the template with the wrong
+punctuation, so those two should go back to matching the JSON word for word. Corrected versions
+of the other three are in `ui.json`.
+
+**4. The email link is a typed address.** Line 210 hard-codes `mailto:info@meyouandus.co.uk`
+while the visible label at the same line comes from `about.json`. Change the address in the JSON
+today and the page shows the new one and mails the old one. Point the `href` at
+`about.contact.email`.
+
+**5. The footer.** Line 124 reads
+`© 2026 MeYouAndUs — Liverpool / Manchester`. An em dash, a year that is wrong in January, and a
+location duplicated from `about.contact.base`. Pattern in `ui.json` under `footer`.
+
+**6. `about.showreel` is unguarded.** Lines 547 and 548 read `about.showreel.url` and
+`.caption` with no fallback, and nothing on the page renders either. Deleting the key throws and
+takes the whole About panel with it. The key stays in `about.json` until the template guards it.
+
+## site.json, resolved
+
+`HANDOVER.md` asked for a decision and offered two options, delete the file or lose the coloured
+blocks. There is a third and it costs design nothing.
+
+The tagline and the two section headings become **display-optional strings**. The words stay in
+`site.json`. The template renders them exactly as designed and carries the plain string into the
+accessible layer.
+
+```html
+<p aria-label="{{ tagline }}">
+  <span aria-hidden="true">Breaking interfaces</span>
+  <span aria-hidden="true">and</span>
+  <span aria-hidden="true">amplifying place</span>
+</p>
+```
+
+The typography is untouched. `site.json` becomes a file that is read again rather than one
+everybody agreed to ignore, and the copy survives into a CMS.
+
+The three strings are readable today because they are still real text. The pattern matters the
+moment any of them becomes an image, which is the kind of change that arrives as a visual note.
 
 ## State of the content
 
 | | |
 | --- | --- |
-| Projects | 20, ten per section, rows total 12 in both |
-| Covers | 18 of 20. `bigheads` and `not-the-beatles` are empty strings |
-| Wide crops | 4, on the span-7/8 cells. `not-the-beatles` still needs one |
-| Video | 18 of 20 |
-| Site images | `hero.jpg` and `bleed.jpg`, both real, both 2560×1440 |
+| Projects | 20, ten per section |
+| Covers | 20 of 20 |
+| Video | 17 of 20 |
+| Posters | 7, each now with written alt text |
+| Cover alt text | 0 of 20. Still the bare project title |
 | About | 28 catalogue entries, 12 awards, 8 press, 13 residencies |
+| Page title and meta description | Drafted in `ui.json`, not signed off, not on the page |
 
-Three projects without film: `tilo-v2` and `wishing-well` are pending, `sonic-market` has
-none and never will — see below.
+## Still open
 
-## What's still coming
-
-- **Images for `tilo-v2` and `wishing-well`**, and a film for `tilo-v2`
-- **`bigheads` and `not-the-beatles`** have films now, so covers can be pulled from them
-- **A file rename pass.** Filenames will become self-describing —
-  `<slug>-cover.jpg` rather than `<slug>/cover.jpg`. Paths in the JSON will change with them.
-  It hasn't happened yet; when it does it's a single co-ordinated change
-
-## Worth knowing
-
-**`sonic-market` has no photograph and no film, and none exists.** A permanent public
-installation for Brighton Digital Festival, and the only surviving asset is a graphic panel.
-It's the one entry in the twenty with no documentation of the work itself.
-
-**Seven images are stand-ins** — listed in `ASSET-MANIFEST.md`. Worth reading before judging
-how any given cell looks.
-
-**Simon Kirwan** shot `handprint-2012/cover.jpg` and `site/hero.jpg`. Carried as `imageCredit`
-on the project and on `images.hero` in `site.json`, and still needs somewhere to display.
-
-## Still open on your side
-
-`video` and `credits` are populated but not rendered. `imageCredit` has nowhere to go.
-Section 2 is a duplicate of section 1. About and Contact takeovers are empty and ready for
-`about.json`. `#/about` is still React state rather than a route, so About is invisible to
-search.
+- **Cover alt text for twenty projects.** The largest outstanding content job. Every image on
+  the site currently announces itself as the project title. Not started, because the stills are
+  still being worked on.
+- **Page title and meta description.** Drafts in `ui.json`, client sign-off needed.
+- **Images and a film for `tilo-v2`, images for `wishing-well`.** Carried over.
+- **Four year values use an en dash**, `2013–15` and three like it. A legitimate typographic use
+  rather than a prose tell, so they have been left. The checker flags them. Content call, still
+  open.
+- **`sonic-market` has no photograph and no film** and none exists. Unchanged.

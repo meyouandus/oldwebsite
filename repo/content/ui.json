@@ -1,0 +1,48 @@
+{
+  "_note": "Interface chrome. The 23 chrome strings lifted out of MeYouAndUs.dc.html on 13 Aug 2026 and corrected to language.md. Content owns this file. Nothing in it should be typed into the template. Keys marked DRAFT need client sign-off before they go live.",
+  "meta": {
+    "title": "MeYouAndUs - breaking interfaces and amplifying place",
+    "description": "We bend the technology people use without thinking into something that makes strangers talk to each other, and we make work for one specific place with the people who already use it.",
+    "_status": "DRAFT. Neither string exists on the page today. Title is 54 characters, description 178 and may want trimming to about 155 for search results."
+  },
+  "brand": {
+    "name": "MeYouAndUs",
+    "logoAlt": "MeYouAndUs"
+  },
+  "nav": {
+    "about": "About",
+    "contact": "Contact"
+  },
+  "controls": {
+    "close": "Close",
+    "playFilm": "Play film",
+    "_note": "playFilm is missing from the template. The button at line 234 has no accessible name at all, so the film cannot be found by anyone using a screen reader. Highest priority fix on the page."
+  },
+  "modal": {
+    "year": "Year",
+    "place": "Place",
+    "commissioner": "Commissioner",
+    "photoCreditPrefix": "Photography",
+    "noMedia": "Images to come - this project predates the archive",
+    "filmLabel": "Film",
+    "imageLabelPattern": "{title}, image {n}",
+    "_note": "noMedia had an em dash in the template. imageLabelPattern is generated in JS at line 462 and currently reads '<title> image 1' with no comma."
+  },
+  "about": {
+    "worksHeading": "Selected works",
+    "awardsHeading": "Awards and funding",
+    "pressHeading": "Press",
+    "residenciesHeading": "Residencies and talks",
+    "pressSeparator": " - ",
+    "_note": "pressSeparator was an em dash at line 190, used between every press title and its publication."
+  },
+  "footer": {
+    "copyrightPattern": "© {year} MeYouAndUs - {base}",
+    "_note": "The template hard-codes '© 2026 MeYouAndUs — Liverpool / Manchester'. Three problems in one line. The em dash, a year that will be wrong in January, and a location duplicated from about.json contact.base. {base} should read from about.json, not be typed here."
+  },
+  "images": {
+    "posterAlt": "posterAlt on each project in projects.json",
+    "coverAltFallback": "{title}",
+    "_note": "posterAlt is a new field, written 13 Aug for the 7 projects that carry a poster frame. The template must read it at line 236 in place of alt=\"{{ workTitle }}\". Covers and still images still fall back to the bare project title, which is placeholder behaviour and not a decision. Alastair is still working on the stills, so leave them."
+  }
+}
