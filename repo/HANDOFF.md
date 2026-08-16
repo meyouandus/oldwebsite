@@ -80,6 +80,8 @@ Listed under "What the template needs" below.
 | `ui.json` | Interface chrome. Labels, control names, section headings, empty states, page metadata |
 | `UI-STRINGS.md` | The register. Every string on the page, where it lives, what it says |
 | `check-strings.py` | Scans the template and reports any string that did not come from JSON |
+| `check-prose.py` | Hunts the `language.md` tells in any markdown or text file |
+| `SITE-JSON-WIRING.md` | The homepage change, line by line |
 
 Run the checker before sending anything over.
 
@@ -124,6 +126,27 @@ location duplicated from `about.contact.base`. Pattern in `ui.json` under `foote
 `.caption` with no fallback, and nothing on the page renders either. Deleting the key throws and
 takes the whole About panel with it. The key stays in `about.json` until the template guards it.
 
+## Corrections after design's first pass, 16 Aug
+
+**The tagline snippet in `CONTENT-CONTRACT.md` was wrong and design was right.** It hid all
+three blocks with `aria-hidden`, and two of them are links that jump to each section. Hiding a
+focusable link removes it from keyboard and screen reader users. The contract now hides only the
+"and" block and gives each link its own label. Design's fix, which puts the sentence on the `<p>`
+and hides only the middle block, does the same job.
+
+Worth knowing for later. `aria-label` on a plain `<p>` is applied unreliably, because the element
+has no role to hang it on. While the blocks are real text the sentence gets read anyway. When any
+of the three becomes an image, add `role="img"` alongside the label, or use visually-hidden text.
+
+**Image `src` staying literal is correct.** An `alt` string is writing. The path next to it is an
+asset reference and belongs to design. `images.hero.src` and `images.bleed.src` in `site.json`
+are a record of where the files live and are not read. `CONTENT-CONTRACT.md` and `ASSET-SPEC.md`
+now say so, so nobody edits them expecting an effect.
+
+**`SITE-JSON-WIRING.md` was written after the push** and did not reach the repo. It is there now.
+Everything in it was worked out independently from the contract and `ui.json`, so it is a
+cross-check rather than new instruction.
+
 ## site.json, resolved
 
 `HANDOVER.md` asked for a decision and offered two options, delete the file or lose the coloured
@@ -146,6 +169,10 @@ everybody agreed to ignore, and the copy survives into a CMS.
 
 The three strings are readable today because they are still real text. The pattern matters the
 moment any of them becomes an image, which is the kind of change that arrives as a visual note.
+
+**`content/SITE-JSON-WIRING.md` has the whole change written out.** Line numbers, the guarded
+reads to add to `renderVals()`, the markup swaps, and how to keep the coloured blocks and the
+designed line breaks while the words come from JSON.
 
 ## State of the content
 

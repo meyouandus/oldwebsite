@@ -56,19 +56,29 @@ typography, split it, colour it, animate it, or replace it with an image. What t
 do is carry the plain string into the accessible layer, so the words still exist for a screen
 reader, a search engine and, later, a CMS field.
 
-For the tagline that means the container carries the whole string and the decorative pieces are
-hidden from assistive technology.
+For the tagline that means the container carries the whole string, and only the pieces that
+carry no function are hidden from assistive technology.
+
+**Corrected 16 Aug.** The first version of this snippet hid all three blocks. Two of them are
+links that jump to each section, so hiding them removed those controls from keyboard and screen
+reader users. Design caught it. Hide the decoration, never the controls.
 
 ```html
 <p aria-label="{{ tagline }}">
-  <span aria-hidden="true">Breaking interfaces</span>
+  <a href="#work"  aria-label="Jump to Breaking interfaces">Breaking interfaces</a>
   <span aria-hidden="true">and</span>
-  <span aria-hidden="true">amplifying place</span>
+  <a href="#place" aria-label="Jump to Amplifying place">amplifying place</a>
 </p>
 ```
 
 `tagline` comes from `site.json`. The three blocks stay exactly as designed. Edit the string in
 the JSON and the accessible name follows, while the visible blocks stay design's to set.
+
+One caveat on `aria-label` here. Screen readers apply it unreliably to a plain `<p>`, because
+the element has no role to hang it on. While the blocks are real text the sentence is read
+anyway, so nothing is lost today. When any of the three becomes an image or an SVG, put
+`role="img"` on the container alongside the `aria-label`, or carry the sentence in
+visually-hidden text. Either survives the treatment.
 
 The same pattern covers anything that later becomes an image or an SVG. The words survive the
 treatment.
@@ -127,6 +137,16 @@ largest outstanding content job on the site.
 
 **Decorative images are marked decorative.** `alt=""`, deliberately, rather than left to
 default.
+
+## What an image path is
+
+An `alt` string is writing and belongs to content. The file path next to it is an asset
+reference and belongs to design, which is why `images.hero.src` and `images.bleed.src` in
+`site.json` are not read by the template and should not be. Replacing the photograph means
+overwriting the file at the same path. Changing the path is a template edit.
+
+Both `src` values stay in `site.json` as a record of where the files live. Editing them changes
+nothing, and `ASSET-SPEC.md` says so.
 
 ## Handover discipline
 

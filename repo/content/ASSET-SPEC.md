@@ -230,7 +230,7 @@ Site-level copy and the two structural photographs, so neither is hard-coded.
 | Field | Notes |
 | --- | --- |
 | `tagline` | The hero subline. A **display-optional string** per `CONTENT-CONTRACT.md`: the template sets it as three coloured blocks across two lines and must carry the plain string into the accessible layer. |
-| `images.hero` / `images.bleed` | `src`, `imageCredit`, `alt`. Both 2560×1440. |
+| `images.hero` / `images.bleed` | `src`, `imageCredit`, `alt`. Both 2560×1440. The `alt` text is read by the template. The `src` is not, and is a record only. Replace a site photograph by overwriting the file at the same path. |
 | `sections[]` | `id`, `theme`, `heading`, `blurb` for each of the two sets. The two headings are display-optional; the two blurbs are ordinary text. |
 
 **`site.json` is currently fetched and ignored.** The template hard-codes all five strings.
